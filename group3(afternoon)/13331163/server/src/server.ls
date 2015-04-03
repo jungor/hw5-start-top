@@ -2,7 +2,7 @@ require! {express, http, path,}
 
 app = express!
 
-app.get '/api/random', (req, res)!-> 
+app.get '/', (req, res)!-> 
   from = req.param 'from'
   set-timeout !->
     res.set 'Content-Type', 'text/plain'

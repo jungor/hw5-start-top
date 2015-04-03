@@ -1,5 +1,6 @@
 module.exports = function(grunt) {
-
+  // 获取路径为express服务
+  var path = require('path');
   // 自动分析package.json文件，自动加载所找到的grunt模块
   require('load-grunt-tasks')(grunt);
 
@@ -10,34 +11,33 @@ module.exports = function(grunt) {
       S1: {
         expand: true,
         cwd: "S1/src/",
-        src: ["**/**.**", "!*.ls"],
+        src: ["**/**.**", "!*.ls", "!*.js"],
         dest: "S1/bin"
       },
       S2: {
         expand: true,
         cwd: "S2/src/",
-        src: ["**/**.**", "!*.ls"],
+        src: ["**/**.**", "!*.ls", "!*.js"],
         dest: "S2/bin"
       },
       S3: {
         expand: true,
         cwd: "S3/src/",
-        src: ["**/**.**", "!*.ls"],
+        src: ["**/**.**", "!*.ls", "!*.js"],
         dest: "S3/bin"
       },
       S4: {
         expand: true,
         cwd: "S4/src/",
-        src: ["**/**.**", "!*.ls"],
+        src: ["**/**.**", "!*.ls", "!*.js"],
         dest: "S4/bin"
       },
       S5: {
         expand: true,
         cwd: "S5/src/",
-        src: ["**/**.**", "!*.ls"],
+        src: ["**/**.**", "!*.ls", "!*.js"],
         dest: "S5/bin"
       }
-
     },
 
     // 编译ls文件 并 送到dest
@@ -90,14 +90,15 @@ module.exports = function(grunt) {
 
     // 启动服务器
     express: {
-      server: {
+      dev: {
         options: {
           // child process for server to run
           // serverreload: true,
-          livereload: 3001,
+          server: path.resolve("server.js"),
+          bases: [path.resolve("")],
           hostname: 'localhost',
           port: 3000,
-          bases: 'server.js'
+          livereload: 3001
         }
       }
     },
@@ -105,7 +106,7 @@ module.exports = function(grunt) {
     // 清空bin文件夹和服务器文件
     clean: {
       client: ["S?/bin/**"],
-      server: ['server/bin/**/*.js']
+      server: ['server.js']
     },
     
     // 观察文件的变化并且更新调用相应的任务
