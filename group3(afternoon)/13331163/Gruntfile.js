@@ -11,33 +11,39 @@ module.exports = function(grunt) {
       S1: {
         expand: true,
         cwd: "S1/src/",
-        src: ["**/**.**", "!*.ls", "!*.js"],
+        src: ["**/**.**", "!*.ls"],
         dest: "S1/bin"
       },
       S2: {
         expand: true,
         cwd: "S2/src/",
-        src: ["**/**.**", "!*.ls", "!*.js"],
+        src: ["**/**.**", "!*.ls"],
         dest: "S2/bin"
       },
       S3: {
         expand: true,
         cwd: "S3/src/",
-        src: ["**/**.**", "!*.ls", "!*.js"],
+        src: ["**/**.**", "!*.ls"],
         dest: "S3/bin"
       },
       S4: {
         expand: true,
         cwd: "S4/src/",
-        src: ["**/**.**", "!*.ls", "!*.js"],
+        src: ["**/**.**", "!*.ls"],
         dest: "S4/bin"
       },
       S5: {
         expand: true,
         cwd: "S5/src/",
-        src: ["**/**.**", "!*.ls", "!*.js"],
+        src: ["**/**.**", "!*.ls"],
         dest: "S5/bin"
-      }
+      },
+      // jQuery: {
+      //   expand: true,
+      //   cwd: "node_modules/jquery/dist/",
+      //   src: "jquery.js",
+      //   dest: "S1/bin"
+      // }
     },
 
     // 编译ls文件 并 送到dest
