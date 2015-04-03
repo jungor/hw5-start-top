@@ -3,7 +3,9 @@ module.exports = function(grunt) {
   // 自动分析package.json文件，自动加载所找到的grunt模块
   require('load-grunt-tasks')(grunt);
 
+  // 配置任务
   grunt.initConfig({
+    // 复制文件
     copy: {
       S1: {
         expand: true,
@@ -38,6 +40,7 @@ module.exports = function(grunt) {
 
     },
 
+    // 编译ls文件 并 送到dest
     livescript: {
       clientS1: {
         expand: true,
@@ -81,27 +84,31 @@ module.exports = function(grunt) {
       server: {
         expand: false,
         src: ["server/src/server.ls"],
-        dest: "server/bin/server.js",
+        dest: "server.js",
       }
     },
 
+    // 启动服务器
     express: {
       server: {
         options: {
           // child process for server to run
-          serverreload: true,
+          // serverreload: true,
+          livereload: 3001,
           hostname: 'localhost',
           port: 3000,
-          bases: 'server/bin/server.js'
+          bases: 'server.js'
         }
       }
     },
 
+    // 清空bin文件夹和服务器文件
     clean: {
       client: ["S?/bin/**"],
       server: ['server/bin/**/*.js']
     },
     
+    // 观察文件的变化并且更新调用相应的任务
     delta: {
       options: {
         livereload: true
@@ -150,7 +157,10 @@ module.exports = function(grunt) {
     }
   });
 
+  // 更改delta的名字，连接到grunt-contrib-watch模块，别名是为了更好的区别观察任务和watch指令
   grunt.renameTask("watch", "delta");
-  grunt.registerTask("build", ["livescript", "copy"]);
+  // 注册任务---编译和复制文件-建立项目
+  grunt.registerTask("build", ["clean", "livescript", "copy"]);
+  // 使所有任务可以根据一个命令有序运行
   grunt.registerTask("watch", ["build", "express", "delta"])
 }
