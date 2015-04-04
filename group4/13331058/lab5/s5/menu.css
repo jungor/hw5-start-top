@@ -1,0 +1,177 @@
+#area {
+	width: 350px;
+	height: 350px;
+	left: 36%;
+	top: 39%;
+	position: fixed;
+}
+
+#bottom-positioner {
+	left: 48%;
+	top: 70%;
+	position: fixed;
+}
+
+#click_area {
+	position: relative;
+	width: 80px;
+	height: 80px;
+	border-radius: 80px;
+}
+
+#button {
+	width: 30px;
+	height: 30px;
+	background-image: url("assets/images/atplus_white.png");
+	background-position: center;
+	background-repeat: no-repeat;
+	background-color: #AAAAAA;
+	border-radius: 100px;
+	position: relative;
+	transition: all 1s;
+}
+
+#button_hover {
+	background-image: url("assets/images/atplus_green.png");
+	background-color: #0044BB;
+	width: 80px;
+	height: 80px;
+	background-position: center;
+	background-repeat: no-repeat;
+	border-radius: 80px;
+	position: relative;
+	transition: all 1s;
+}
+
+li {
+	list-style-type: none;
+}
+
+#button * {
+	position: absolute;
+}
+
+#button_hover * {
+	position: absolute;
+}
+
+.info {
+	-webkit-transition: all 1s;
+	font-family: Arial, sans-serif;
+	color: #58C998;
+	font-weight: bold;
+	font-size: 300%;
+	line-height: 150px;
+	text-align: center;
+	background-color: #666666;
+	border-radius: 100px;
+	width: 0px;
+	height: 0px;
+	left: 0px;
+	top: 0px;
+	opacity: 0;
+	transition: all 1s;
+}
+
+#control-ring .button {
+	width: 0px;
+	height: 0px;
+	left: 0px;
+	top: 0px;
+	background-color: #696969;
+	border-radius: 100px;
+	opacity: 0;
+}
+
+#area:hover .info {
+	font-family: Arial, sans-serif;
+	color: #58C998;
+	font-weight: bold;
+	font-size: 300%;
+	line-height: 150px;
+	text-align: center;
+
+	left: -35px;
+	top: -190px;
+	width: 150px;
+	height: 150px;
+	opacity: 1;
+}
+
+.button {
+	-webkit-transition: all 1s;
+	font-family: Arial, sans-serif;
+	color: #58C998;
+	font-weight: bold;
+	font-size: 140%;
+	line-height: 40px;
+	text-align: center;
+}
+
+#area:hover .button {
+	font-family: Arial, sans-serif;
+	color: #58C998;
+	font-weight: bold;
+	font-size: 140%;
+	line-height: 40px;
+	text-align: center;
+	background-color: #666666;
+	width: 40px;
+	height: 40px;
+	opacity: 1;
+	background-repeat: no-repeat;
+	background-position: center;
+	transition: all 1s;
+}
+
+#area:hover .A {
+	left: -50px;
+	top: -50px;
+}
+
+#area:hover .B {
+	left: -80px;
+	top: 0px;
+}
+
+#area:hover .C {
+	left: -55px;
+	top: 50px;
+}
+
+#area:hover .D {
+	left: -10px;
+	top: 82px;
+}
+
+#area:hover .E {
+	left: 45px;
+	top: 75px;
+}
+
+.random_num {
+	width: 0px;
+	height: 0px;
+	left: 0px;
+	top: 0px;
+	font-size: 0pt;
+	text-align: center;
+	line-height: 0px;
+	display: none;
+}
+
+#area:hover .random_num {
+	display: none;
+	width: 20px;
+	height: 20px;
+	border-radius: 20px;
+	left: 28px;
+	top: -3px;
+	background: #FE372F;
+	background-position: center;
+	text-align: center;
+	font-size: 10pt;
+	color: white;
+	line-height: 20px;
+	font-family: Arial, sans-serif;
+}
