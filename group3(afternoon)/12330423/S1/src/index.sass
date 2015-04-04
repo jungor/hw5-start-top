@@ -25,25 +25,24 @@ html, body
     height: 150px
     left: 45%            // middle
     bottom: 50px            // bottom
-    border: 1px solid red
     border-radius: $circle
     
     #original-container
       position: absolute
-      top: 60px
-      left: 60px
-      width: 30px
-      height: 30px
-      border: 1px solid blue
+      top: 45px
+      left: 45px
+      width: 60px
+      height: 60px
 
       img#base
         position: absolute
+        z-index: 100
         border-radius: $circle
-        transition: all 0.5s ease-in-out
-        top: 2px
-        left: 2px
-        width: 60%
-        height: 60%
+        transition: all 0.5s ease-in-out 0.1s
+        top: 15px
+        left: 18px
+        width: 30%
+        height: 30%
         padding: 4px
         background: rgb(152, 159, 207)
         opacity: 1
@@ -66,6 +65,20 @@ html, body
         padding: 0
         li
           position: absolute
+        #order
+          position: absolute
+          left: 25%
+          top: 20%
+          color: white
+          opacity: 0
+          transition: all 0.5s ease-in-out
+        #sum
+          position: absolute
+          left: 30%
+          top: 28%
+          font-size: 50px
+          opacity: 0
+          transition: all 0.5s ease-in-out
 
     #control-ring-container
       position: absolute
@@ -79,6 +92,7 @@ html, body
         height: 100%
         margin: 0
         padding: 0
+
         li
           position: absolute
           text-align: center
@@ -91,10 +105,22 @@ html, body
           opacity: 0
           transform: scale(0.5)
           transition: all 0.5s ease-in-out
+
           span
             position: absolute
             top: 4px
             left: 8px
+
+          strong
+            position: absolute
+            left: 20px
+            font-size: 10px
+            width: 15px
+            height: 15px
+            background-color: red
+            border-radius: $circle
+            opacity: 0
+            transition: all 0.5s ease-in-out
 
   // 动画
   #button:hover
@@ -109,6 +135,7 @@ html, body
     #control-ring-container  // 带小红点的气泡
       li
         opacity: 1
+      
       li.A
         transform: translate(-50px, -32px) scale(1.1)
       li.B
@@ -125,7 +152,6 @@ html, body
       transform: translate(-50px, -180px)
       width: 150px
       height: 150px
-
 
 li
   list-style: none
