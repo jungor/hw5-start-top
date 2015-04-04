@@ -58,7 +58,6 @@ function handleAjax(req, res) {
         res.writeHead(200, { 'Content-Type': 'text/plain' });
         res.end("" + random_num);
     }, random_time);
-    console.log(random_num);
 }
 
 function getRandomNumber(limit) {

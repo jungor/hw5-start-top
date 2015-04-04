@@ -50,7 +50,7 @@ disable-btn = (btn) ->
 
 check-ready = ->
   if NUMBERS.length == 5
-    document.getElementById('base').setAttribute('onclick', 'showSum()')
+    document.getElementById('info-bar').setAttribute('onclick', 'showSum()')
 
 
 @show-sum = ->
@@ -60,14 +60,12 @@ check-ready = ->
     result += item
   sumSpan.innerText = result
   sumSpan.style.opacity = 1
-  document.getElementById('base').style.backgroundColor = \#666
 
 
 @reset = ->
   window.onload()
   enable-other-btn()
   document.getElementById('sum').style.opacity = 0
-  document.getElementById('base').style.backgroundColor = \blue
   for btn in btns
     btn.getElementsByClassName('num')[0].style.opacity = 0
-    document.getElementById('base').setAttribute('onclick', '')
+    document.getElementById('info-bar').setAttribute('onclick', '')
