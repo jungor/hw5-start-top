@@ -315,7 +315,7 @@ div.info > ul > li {
 #message-box {
 	width: 500px;
 	height: 40px;
-	/*background: red;*/
+	/*background-color: red;*/
 	position: absolute;
 	text-align: center;
 	display: none;

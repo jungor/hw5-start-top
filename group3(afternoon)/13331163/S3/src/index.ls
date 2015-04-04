@@ -36,18 +36,14 @@ add-handler = (button, currentSum) !->
     $(this) .children '.unread' .add-class "visiable" .text '...'
 
     # 向服务器索取数字
-    $.get '/'+"?random="+Math.random*1000, (data, status) !~>
+    $.get '/', (data, status) !~>
+      return if this.status is 'unclick'
       # 显示数字
       $(this) .children '.unread' .text data
       # 做和运算
       currentSum.sum += parseInt data
-      console.log currentSum
-      # 回复所有按钮状态
-      for bt in $ '.button'
-        if bt.status is 'clicked'
-          $(bt) .remove-class 'unvisit' .add-class 'visited'
-        else
-          $(bt) .remove-class 'visited' .add-class 'unvisit'
+      # 到一个数字灭一个按钮
+      $(this) .remove-class 'unvisit' .add-class 'visited' if this.status is 'clicked'
 
       # 检查是否所有的按钮已经被按过
       flag = true
@@ -56,13 +52,12 @@ add-handler = (button, currentSum) !->
           flag = false
           break
       # 给大按钮修改为可访问状态
-      $ '#info' .remove-class 'visited' .add-class 'unvisit' if flag is true
-
+      $ '#info' .remove-class 'visited' .add-class 'unvisit' .trigger 'handler' if flag is true
     # 触发下一个按钮
-    if this.next is undefined
+    if this.next-button is undefined
       $ '#info' .trigger 'handler'
-    else if this.next isnt false
-      $ 'li'+":nth-child(#{this.next})" .trigger 'handler' 
+    else if this.next-button isnt false
+      $ 'li'+":nth-child(#{this.next-button})" .trigger 'handler' 
 
 
 # 给大按钮添加处理时间
@@ -87,16 +82,13 @@ add-handler-on-info-button = (currentSum) !->
 
 add-reset-function = (currentSum) !->
   $ '#button' .on 'mouseleave', !->
-    console.log 'setTimeout'
     setTimeout reset currentSum, 0
 
 reset = (currentSum) !->
-  console.log 'begin reset'
   # 恢复按钮
   for bt in $ '.button'
     bt.status = 'unclick'
-    console.log bt.next
-    bt.next = false
+    bt.next-button = false
     $(bt) .remove-class 'visited' .add-class 'unvisit'
     $(bt) .children '.unread' .remove-class 'visiable'
   # 恢复大气泡
@@ -104,7 +96,8 @@ reset = (currentSum) !->
   $ '#info' .remove-class 'unvisit' .add-class 'visited' .text " "
   # 恢复和
   currentSum.sum = 0
-  console.log currentSum.sum
+  # 恢复 @+ 按钮
+  $ '#button' .get(0) .status = "unclick"
 
 add-robot-button = (currentSum) !->
   # 设置'@+'按钮初始状态
@@ -112,15 +105,15 @@ add-robot-button = (currentSum) !->
   # 给 '@+' 按钮绑定处理器
   $ '#button' .bind 'handler', (event) ->
     event.stopPropagation!
-    console.log 'in button'
     return if this.status is 'clicked'
-    this.status = 'unclick'
+    reset currentSum
+    this.status = 'clicked'
     # 获取一组顺序
     sequence = [ 1 til 6 by 1 ]
     # 给每一个按钮设置下一按钮
     for i from 0 til 4 by 1
-      $ 'li'+":nth-child(#{sequence[i]})" .get(0) .next = sequence[i+1]
-    $ 'li' + ":nth-child(#{sequence[4]})" .get(0) .next = undefined
+      $ 'li'+":nth-child(#{sequence[i]})" .get(0) .next-button = sequence[i+1]
+    $ 'li' + ":nth-child(#{sequence[4]})" .get(0) .next-button = undefined
     # 开始按下第一个按钮
     currentSum.sum = 0
     $ 'li'+":nth-child(#{sequence[0]})" .trigger 'handler'
@@ -128,5 +121,7 @@ add-robot-button = (currentSum) !->
   # '@+' 按钮点击触发处理器
   $ '#button' .click (event) !->
     event.stopPropagation!
-    console.log 'button click'
     $ (this) .trigger 'handler'
+
+# jquery ajax清理缓存
+$.ajaxSetup cache:false

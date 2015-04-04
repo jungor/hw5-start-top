@@ -36,17 +36,14 @@
       this.status = 'clicked';
       $(this).children('.unread').addClass("visiable").text('...');
       return $.get('/', function(data, status){
-        var i$, ref$, len$, bt, flag;
+        var flag, i$, ref$, len$, bt;
+        if (this$.status === 'unclicked') {
+          return;
+        }
         $(this$).children('.unread').text(data);
         currentSum.sum += parseInt(data);
-        console.log(currentSum);
-        for (i$ = 0, len$ = (ref$ = $('.button')).length; i$ < len$; ++i$) {
-          bt = ref$[i$];
-          if (bt.status === 'clicked') {
-            $(bt).removeClass('unvisit').addClass('visited');
-          } else {
-            $(bt).removeClass('visited').addClass('unvisit');
-          }
+        if (this$.status === 'clicked') {
+          $(this$).removeClass('unvisit').addClass('visited');
         }
         flag = true;
         for (i$ = 0, len$ = (ref$ = $('.button')).length; i$ < len$; ++i$) {
@@ -59,10 +56,10 @@
         if (flag === true) {
           $('#info').removeClass('visited').addClass('unvisit');
         }
-        if (this$.next === undefined) {
-          $('#info').trigger('handler');
-        } else if (this$.next !== false) {
-          $('li' + (":nth-child(" + this$.next + ")")).trigger('handler');
+        if (this$.nextButton === undefined) {
+          return $('#info').trigger('handler');
+        } else if (this$.nextButton !== false) {
+          return $('li' + (":nth-child(" + this$.nextButton + ")")).trigger('handler');
         }
       });
     });
@@ -87,49 +84,48 @@
   };
   addResetFunction = function(currentSum){
     $('#button').on('mouseleave', function(){
-      console.log('setTimeout');
       setTimeout(reset(currentSum, 0));
     });
   };
   reset = function(currentSum){
     var i$, ref$, len$, bt;
-    console.log('begin reset');
     for (i$ = 0, len$ = (ref$ = $('.button')).length; i$ < len$; ++i$) {
       bt = ref$[i$];
       bt.status = 'unclick';
-      console.log(bt.next);
-      bt.next = false;
+      bt.nextButton = false;
       $(bt).removeClass('visited').addClass('unvisit');
       $(bt).children('.unread').removeClass('visiable');
     }
     $('#info').get(0).status = 'unclick';
     $('#info').removeClass('unvisit').addClass('visited').text(" ");
     currentSum.sum = 0;
-    console.log(currentSum.sum);
+    $('#button').get(0).status = 'unclick';
   };
   addRobotButton = function(currentSum){
     $('#button').get(0).status = 'unclick';
     $('#button').bind('handler', function(event){
       var sequence, i$, i;
       event.stopPropagation();
-      console.log('in button');
       if (this.status === 'clicked') {
         return;
       }
-      this.status = 'unclick';
+      reset(currentSum);
+      this.status = 'clicked';
       sequence = [1, 2, 3, 4, 5];
       for (i$ = 0; i$ < 4; ++i$) {
         i = i$;
-        $('li' + (":nth-child(" + sequence[i] + ")")).get(0).next = sequence[i + 1];
+        $('li' + (":nth-child(" + sequence[i] + ")")).get(0).nextButton = sequence[i + 1];
       }
-      $('li' + (":nth-child(" + sequence[4] + ")")).get(0).next = undefined;
+      $('li' + (":nth-child(" + sequence[4] + ")")).get(0).nextButton = undefined;
       currentSum.sum = 0;
       return $('li' + (":nth-child(" + sequence[0] + ")")).trigger('handler');
     });
     $('#button').click(function(event){
       event.stopPropagation();
-      console.log('button click');
       $(this).trigger('handler');
     });
   };
+  $.ajaxSetup({
+    cache: false
+  });
 }).call(this);

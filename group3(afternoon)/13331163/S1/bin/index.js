@@ -4,9 +4,7 @@
   $(function(){
     var currentSum;
     currentSum = new CurrentSum;
-    console.log(currentSum.sum);
     addHandlerOnControlRingButtons(currentSum);
-    console.log('here');
     addHandlerOnInfoButton(currentSum);
     return addResetFunction(currentSum);
   });
@@ -23,7 +21,6 @@
       $(button).click(fn$);
     }
     function fn$(){
-      console.log('click');
       $(this).trigger('handler');
     }
   };
@@ -73,18 +70,13 @@
     info[0].status = 'unclick';
     info.addClass('visited');
     info.bind('handler', function(){
-      console.log('info handler trigger');
-      console.log(this);
-      console.log("this.status : " + this.status);
       if (this.status === 'clicked' || $(this).hasClass('visited')) {
         return;
       }
-      console.log('enter deeper');
       this.status = 'clicked';
       return $(this).removeClass('unvisit').addClass('visited').text(currentSum.sum);
     });
     info.click(function(){
-      console.log('info clicked');
       $(this).trigger('handler');
     });
   };
@@ -105,4 +97,7 @@
     $('#info').removeClass('unvisit').addClass('visited').text(" ");
     currentSum.sum = 0;
   };
+  $.ajaxSetup({
+    cache: false
+  });
 }).call(this);

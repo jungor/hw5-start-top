@@ -1,10 +1,8 @@
 $ ->
   # 对象记录和
   currentSum = new CurrentSum
-  console.log currentSum.sum
 
   add-handler-on-control-ring-buttons currentSum
-  console.log 'here'
   add-handler-on-info-button currentSum
   add-reset-function currentSum
 
@@ -21,7 +19,6 @@ add-handler-on-control-ring-buttons = (currentSum) !->
     add-handler button, currentSum
     # 给每个按钮设置点击时间
     $(button) .click !->
-      console.log 'click'
       $(this) .trigger 'handler'
 
 # 给按钮添加处理器
@@ -72,18 +69,13 @@ add-handler-on-info-button = (currentSum)!->
 
   # 给大气泡绑定处理器
   info .bind 'handler', ->
-    console.log 'info handler trigger'
-    console.log this
-    console.log "this.status : #{this.status}" 
     # 若大气泡已点击或者不能访问则返回
     return if this.status is 'clicked' or $(this) .has-class 'visited'
-    console.log 'enter deeper'
     # 设置大气泡为已点击状态
     this.status = 'clicked'
     $(this) .remove-class 'unvisit' .add-class 'visited' .text currentSum.sum
   # 当大气泡被点击时触发处理时间
   info .click !->
-    console.log 'info clicked'
     $(this) .trigger 'handler'
 
 add-reset-function = (currentSum) ->
@@ -102,3 +94,5 @@ reset = (currentSum) !->
   # 恢复和
   currentSum.sum = 0
 
+# jquery ajax清理缓存
+$.ajaxSetup cache:false
