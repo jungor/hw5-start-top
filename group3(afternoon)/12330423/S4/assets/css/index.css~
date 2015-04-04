@@ -1,0 +1,253 @@
+/* Global Layout */
+body {
+    background-color: azure;
+}
+ul {
+    list-style-type: none;
+}
+
+#at-plus-container {
+    position: absolute;
+    height: 200px;
+    width: 200px;
+    padding: 20px;
+    margin: 400px 200px 300px 500px;
+}
+
+#bottom-positioner {
+    position: absolute;
+    top: 50%;
+    left: 45%;
+}
+#original-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+}
+
+/* for "@" images */
+#original-base {
+    position: absolute;
+    background-color: #9A9DC8;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    padding: 3px;
+
+    opacity: 1.0;
+    transition: opacity 0.5s ease-in, transform 0.5s ease-in;
+}
+#original-extend {
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    background-color: #323AA5;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    padding: 7px;
+
+    opacity: 0.0;
+    transition: transform 0.5s ease-out 0.5s, opacity 1s ease-out 0.5s;
+}
+#button:hover #original-base {
+    transform: scale(1.5, 1.5) rotate(-360deg);
+    opacity: 0.0;
+}
+#button:hover #original-extend {
+    transform: scale(0.8, 0.8) rotate(360deg);
+    opacity: 1.0;
+}
+
+/* for the big circle which contains four sub contents */
+ul {
+    margin: 0px;
+    padding: 0px;
+}
+
+#button:hover .info > ul > li {
+    opacity: 1.0;
+}
+
+.info {
+    position: absolute;
+    top: 10px;
+    opacity: 0.0;
+    width: 13px;
+    height: 13px;
+    background-color: #7E7E7E;
+    border-radius: 50%;
+    transition: opacity 1.0s ease-out 0.5s, width 1.0s ease-out 0.5s, height 1.0s ease-out 0.5s, transform 1.0s ease-out 0.5s;
+}
+
+#button:hover .info {
+    opacity: 1.0;
+    width: 130px;
+    height: 130px;
+    transform: translate(40px, -140px) scale(1.2, 1.2);
+}
+
+.page-user > img {
+    transition: opacity 0.5s ease-out 0.5s, transform 1.0s ease-out 0.5s;
+}
+#button:hover .page-user > img {
+    transform: translate(35px, 5px);
+}
+
+.page-user > span {
+    position: absolute;
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+    transition: opacity 0.5s ease-out 0.5s, transform 1.0s ease-out 0.5s;
+}
+#button:hover .page-user > span {
+    transform: translate(45px, 5px);
+}
+
+
+.page-comment > img {
+    width: 30px;
+    height: 30px;
+    transition: opacity 0.5s ease-out 0.5s, transform 1.0s ease-out 0.5s;
+}
+#button:hover .page-comment > img {
+    transform: translate(25px, 40px) scale(1.2, 1.2);
+}
+.page-comment > span {
+    position: absolute;
+    font-size: 30px;
+    font-weight: bolder;
+    color: white;
+    transition: opacity 0.5s ease-out 0.5s, transform 1.0s ease-out 0.5s;
+}
+#button:hover .page-comment > span {
+    transform: translate(40px, 37px);
+}
+
+.mine-posted > img {
+    transition: opacity 0.5s ease-out 0.5s, transform 1.0s ease-out 0.5s;
+}
+#button:hover .mine-posted > img {
+    transform: translate(15px, 80px);
+}
+
+.mine-posted > span {
+    position: absolute;
+    font-size: 20px;
+    font-weight: bold;
+    color: #3CCB95;
+    transition: opacity 0.5s ease-out, transform 1.0s ease-out 0.5s;
+}
+#button:hover .mine-posted > span {
+    transform: translate(18px, 80px);
+}
+
+.mine-like > img {
+    transition: opacity 0.5s ease-out 0.5s, transform 1.0s ease-out 0.5s;
+}
+#button:hover .mine-like > img {
+    transform: translate(60px, 80px);
+}
+
+.mine-like > span {
+    position: absolute;
+    font-size: 20px;
+    font-weight: bold;
+    color: #3CCB95;
+    transition: opacity 0.5s ease-out 0.5s, transform 1.0s ease-out 0.5s;
+}
+#button:hover .mine-like > span {
+    transform: translate(65px, 80px);
+}
+
+/* control-ring */
+#control-ring > li {
+    position: absolute;
+    opacity: 0.0;
+    background-color: #2145A0;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    padding: 8px;
+   
+    transition: opacity 0.5s ease-out 0.5s, transform 1.0s ease-out 0.5s;
+}
+
+#button:hover .mask-button {
+    opacity: 1.0;
+    transform: translate(-50px, -55px) rotate(-360deg);
+}
+.mask-button:hover img {
+    content: url("../images/mask.png");
+}
+#button:hover .history-button {
+    opacity: 1.0;
+    transform: translate(-70px, 0px) rotate(-360deg);
+}
+#button:hover .message-button {
+    opacity: 1.0;
+    transform: translate(-55px, 45px) rotate(-360deg);
+}
+#button:hover .setting-button {
+    opacity: 1.0;
+    transform: translate(-5px, 65px) rotate(-360deg);
+}
+#button:hover .sign-button
+ {
+    opacity: 1.0;
+    transform: translate(53px, 40px) rotate(-360deg);
+}
+
+#control-ring > li > span {
+    font-size: 30px;
+    font-weight: bolder;
+    color: #239982;
+
+    position: relative;
+    top: -8px;
+    left: 2px;
+}
+
+#control-ring > li:hover > span {
+    color: white;
+}
+
+/* 小红点 */
+.unread {
+    position: absolute;
+    top: -5px;
+    left: 22px;
+    display: inline-block;
+    border-radius: 50%;
+    font-weight: bolder;
+    font-size: 18px;
+    color: #F6A7A3;
+    background-color: #FD4541;
+    padding-left: 5px;
+    padding-right: 6px;
+    opacity: 0.0;
+}
+
+.info > ul > li {
+    position: absolute;
+    font-size: 50px;
+    color: #2DDA9C;
+    opacity: 0.0;
+    padding: 8px;
+    top: 25px;
+    left: 45px;
+    transition: opacity 1.0s ease-out 0.5s;
+}
+
+#SUM > strong {
+    opacity: 0.0;
+}
+
+.info > span {
+    font-family: Consolas;
+    font-size: 20px;
+    position: absolute;
+    top: -30px;
+    left: 18px;
+}

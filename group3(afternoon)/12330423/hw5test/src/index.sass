@@ -1,0 +1,131 @@
+$font-stack: Helvetica, sans-serif
+$primary-color: #333
+$circle: 50%
+
+html, body
+  font: 100% $font-stack
+  color: $primary-color
+  width: 100%
+  height: 100%
+  padding: 0  // keep the page from scrollbar
+  margin: 0
+
+#at-plus-container
+  width: 100%
+  height: 100%
+
+  #bottom-positioner
+    position: absolute
+    width: 100%
+    bottom: 0px
+
+  #button
+    position: absolute   // relative to bottom-positioner
+    width: 150px
+    height: 150px
+    left: 45%            // middle
+    bottom: 50px            // bottom
+    border: 1px solid red
+    border-radius: $circle
+    
+    #original-container
+      position: absolute
+      top: 60px
+      left: 60px
+      width: 30px
+      height: 30px
+      border: 1px solid blue
+
+      img#base
+        position: absolute
+        border-radius: $circle
+        transition: all 0.5s ease-in-out
+        top: 2px
+        left: 2px
+        width: 60%
+        height: 60%
+        padding: 4px
+        background: rgb(152, 159, 207)
+        opacity: 1
+
+    #info-bar
+      position: absolute
+      top: 60px
+      left: 60px
+      width: 30px
+      height: 30px
+      border-radius: $circle
+      background-color: #7E7E7E
+      opacity: 0
+      transition: all 0.5s ease-in-out
+      ul
+        position: absolute
+        width: 100%
+        height: 100%
+        margin: 0
+        padding: 0
+        li
+          position: absolute
+
+    #control-ring-container
+      position: absolute
+      top: 60px
+      left: 60px
+      width: 30px
+      height: 30px
+      ul
+        position: absolute
+        width: 100%
+        height: 100%
+        margin: 0
+        padding: 0
+        li
+          position: absolute
+          text-align: center
+          font-size: 20px
+          width: 30px
+          height: 30px
+          color: white
+          background-color: blue
+          border-radius: $circle
+          opacity: 0
+          transform: scale(0.5)
+          transition: all 0.5s ease-in-out
+          span
+            position: absolute
+            top: 4px
+            left: 8px
+
+  // 动画
+  #button:hover
+
+    #original-container
+      #base
+        background: blue
+        transform: scale(1.8)
+        content: url('../images/atplus_green.png')
+        opacity: 1
+
+    #control-ring-container  // 带小红点的气泡
+      li
+        opacity: 1
+      li.A
+        transform: translate(-50px, -32px) scale(1.1)
+      li.B
+        transform: translate(-60px, 8px) scale(1.1)
+      li.C
+        transform: translate(-40px, 42px) scale(1.1)
+      li.D
+        transform: translate(0px, 60px) scale(1.1)
+      li.E
+        transform: translate(40px, 45px) scale(1.1)
+
+    #info-bar
+      opacity: 0.8
+      transform: translate(-50px, -180px)
+      width: 150px
+      height: 150px
+
+
+li
+  list-style: none
