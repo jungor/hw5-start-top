@@ -50,7 +50,7 @@ div.info {
 	line-height: 130px;
 	color: #28DF9C;
 	font-size: 22pt;
-	background-color: gray;
+	/*background-color: gray;*/
 	-moz-border-radius: 100px;
 	-webkit-border-radius: 100px;
 	border-radius: 100px;
