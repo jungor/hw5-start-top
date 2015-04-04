@@ -1,0 +1,210 @@
+* {
+  font-family: Arial, sans-serif;
+}
+
+ul {
+  list-style-type: none;
+}
+
+#at-plus-container {
+  position: fixed;
+  top: 70%;
+  left: 50%;
+}
+
+/********************#button：容纳整个环形菜单的元素，hover后增大，包裹住整个环形菜单******************/
+#button {
+  position: relative;
+  top: 0;
+  left: 0;
+  transition: all 0.5s;
+}
+#button:hover {
+  width: 170px;
+  height: 170px;
+  top: -45px;
+  left: -60px;
+  border-radius: 50%;
+}
+
+/********************.icon：菜单中间的@+图标，#button触发hover后发生变化******************/
+.icon {
+  width: 30px;
+  height: 30px;
+  background-image: url("assets/images/atplus_white.png");
+  background-color: #9BA0D7;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 25px;
+  border-radius: 50%;
+  transition: all 0.5s;
+  position: absolute;
+  top: 15px;
+  left: 0px;
+}
+#button:hover .icon {
+  width: 50px;
+  height: 50px;
+  background-image: url("assets/images/atplus_green.png");
+  background-size: 35px;
+  background-color: #2F3CA4;
+  top: 60px;
+  left: 60px;
+}
+
+/********************#info-bar：大气泡，#button触发hover后，大气泡大小、位置发生变化******************/
+#info-bar {
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  position: absolute;
+  top: 30px;
+  left: 20px;
+  opacity: 0;
+  transition: all 0.5s;
+}
+#button:hover #info-bar {
+  width: 140px;
+  height: 140px;
+  top: -90px;
+  left: 20px;
+  opacity: 1;
+}
+
+/********************#info-bar里的图标和数字，#button触发hover后，位置发生变化******************/
+.info li img,.info li span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: all 0.5s;
+}
+#button:hover .user img {
+  top: 20px;
+  left: 45px;
+}
+#button:hover .user span {
+  top: 21px;
+  left: 75px;
+  color: white;
+  font-size: 20px;
+}
+#button:hover .comment img {
+  top: 55px;
+  left: 40px;
+}
+#button:hover .comment span {
+  top: 50px;
+  left: 75px;
+  color: white;
+  font-size: 30px;
+}
+#button:hover .posted img {
+  top: 90px;
+  left: 30px;
+}
+#button:hover .posted span {
+  top: 91px;
+  left: 60px;
+  color: #45C998;
+  font-size: 20px;
+}
+#button:hover .like img {
+  top: 90px;
+  left: 80px;
+}
+#button:hover .like span {
+  top: 91px;
+  left: 110px;
+  color: #45C998;
+  font-size: 20px;
+}
+
+/********************.button：五个小气泡，各自带有不同的图标作为background******************/
+.button {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: #192E89;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 15px;
+  position: absolute;
+  top: 15px;
+  left: 0px;
+  /*开始时小气泡隐藏*/
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.5s;
+  cursor: pointer;
+}
+
+/********************#button触发hover后，五个小气泡显示，并且位置发生变化******************/
+#button:hover .button {
+  visibility: visible;
+  opacity: 1;
+}
+#button:hover .mask {
+  top: 40px;
+  left: 15px;
+}
+#button:hover .history {
+  top: 75px;
+  left: 5px;
+}
+#button:hover .message {
+  top: 110px;
+  left: 20px;
+}
+#button:hover .setting {
+  top: 129px;
+  left: 55px;
+}
+#button:hover .sign {
+  top: 121px;
+  left: 94px;
+}
+
+/********************计算器的样式******************/
+#info-bar span {
+  font-size: 30px;
+  position: absolute;
+  top: 55px;
+  left: 55px;
+  color: #25E7A1;
+}
+
+.letters {
+  position: absolute;
+  top: 4px;
+  left: 8px;
+  color: #25E7A1;
+  font-family: Arial;
+  font-weight: 500;
+  font-size: 20px;
+}
+
+.number {
+  height: 17px;
+  width: 17px;
+  font-family: Arial;
+  color: white;
+  border-radius: 100%;
+  background-color: red;
+  text-align: center;
+  line-height: 19px;
+  position: absolute;
+  left: 18px;
+  top: -5px;
+  font-size: 12px;
+  display: none;
+}
+
+.disable {
+  background-color: #7E7E7E;
+  cursor: default;
+}
+
+.enable {
+  background-color: #192E89;
+  cursor: pointer;
+}

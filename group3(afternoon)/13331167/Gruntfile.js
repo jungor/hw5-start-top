@@ -8,13 +8,13 @@ module.exports = function (grunt) {
   grunt.initConfig({
 
   	copy: {
-  		files: {
-  			src: ["**/*.*", "!**/*.{jade,ls,sass}"],
+  		assests: {
+  			src: ["**/assets/**", "**/*.html", "**/*.css", "server.js", "jquery.min.js"],
   			dest: "bin/",
   			cwd: "src/",
   			expand: true
   		}
-  	},
+    },
 
   	clean: {
   		files: {
@@ -33,13 +33,6 @@ module.exports = function (grunt) {
         dest: "bin/",
         ext: ".js"
       },
-      server: {
-        expand: true,
-        cwd: "server/",
-        src: ["**/*.ls", "!host-config.example.ls"],
-        dest: "bin/",
-        ext: ".js"
-      }
     },
 
   	express: {
@@ -58,19 +51,12 @@ module.exports = function (grunt) {
   			livereload: true
   		},
   		livescriptclient: {
-        files: ["src/**/*.ls", "!src/at-plus-page/index.ls"],
+        files: ["src/**/*.ls"],
         tasks: ["newer:livescript:client"]
       },
-      livescriptserver: {
-        files: ["server/**/*.ls"],
-        tasks: ["newer:livescript:server", "express-restart"],
-        options: {
-          livereload: false
-        }
-      },
       assests: {
-        files: ["src/*", "src/**/*", "!**/*.{jade,ls,sass}"],
-        tasks: ["newer:copy"]
+        files: ["src/**/*", "!**/*.ls"],
+        tasks: ["newer:copy:assests"]
       },
   		express: {
   			files: ["bin/**/*.*", "!bin/server.js", "!bin/data.js"],

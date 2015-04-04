@@ -41,7 +41,6 @@ ul {
   position: absolute;
   top: 15px;
   left: 0px;
-  cursor: pointer;
 }
 #button:hover .icon {
   width: 50px;
@@ -207,5 +206,9 @@ ul {
 
 .enable {
   background-color: #192E89;
+  cursor: pointer;
+}
+
+.unclicked {
   cursor: pointer;
 }
