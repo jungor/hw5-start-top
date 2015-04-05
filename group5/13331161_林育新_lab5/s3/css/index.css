@@ -1,0 +1,234 @@
+body {
+	width: 800px;
+	margin: 0 auto;
+}
+#at-plus-container {
+	width: 300px;
+	position: relative;
+	top: 380px;
+	left: 31%;
+}
+#bottom-positioner {
+	width: 300px;
+	height: 150px;
+}
+#button {
+	margin-left: 40%;
+	-webkit-transition: all .5s;
+	-moz-transition: all .5s;
+	transition: all .5s;
+}
+ul li {
+	list-style-type: none;
+}
+.apb {
+	background-color: #585858;
+	width: 30px;
+	height: 30px;
+	border-radius: 15px;
+	background-image: url("../assets/images/atplus_white.png");
+	background-repeat: no-repeat;
+	background-position: 3px 7px;
+	background-size: 80%;
+	opacity: .4;
+
+	position: absolute;
+	top: 45px;
+	left: 48%;
+
+	-webkit-transition: all .5s .4s;
+	-moz-transition: all .5s .4s;
+	transition: all .5s .4s;
+}
+.mask, .history, .message, .setting, .sign {
+	width: 30px;
+	height: 30px;
+	border-radius: 15px;
+	background-repeat: no-repeat;
+	background-size: 50%;
+	background-position: 7px 8px;
+	background-color: rgba(0, 0, 0, .4);
+	opacity: 0;
+	
+	position: absolute;
+	top: 45px;
+	left: 48%;
+
+	-webkit-transition: all 0.5s;
+	-moz-transition: all 0.5s;
+	transition: all 0.5s;
+}
+.unread {
+	position: absolute;
+	top: -2px;
+	left: 20px;
+
+	background-color: #cc0000;
+	width: 15px;
+	height: 15px;
+	border-radius: 8px;
+
+	color: #fff;
+	text-align: center;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 3px;
+	font-weight: 900;
+}
+#control-ring img {
+	display: block;
+	width: 50%;
+	padding: 7px 0 0 8px;
+}
+#info-bar {
+	color: #FFF;
+	text-align: center;
+	font-size: 25px;
+	
+	width: 30px;
+	height: 30px;
+	border-radius: 55px;
+	opacity: 0;
+
+	position: absolute;
+	top: 45px;
+	left: 48%;
+	overflow: hidden;
+
+	-webkit-transition: all 0.5s;
+	-moz-transition: all 0.5s;
+	transition: all 0.5s;
+}
+.user {
+	position: absolute;
+	top: 8px;
+	left: 32px;
+}
+.comment {
+	position: absolute;
+	top: 26px;
+	left: 27px;
+}
+.posted {
+	position: absolute;
+	top: 68px;
+	left: 15px;
+}
+.like {
+	position: absolute;
+	top: 68px;
+	left: 58px;
+}
+.info span {
+	margin-left: 5px;
+	vertical-align: 8px;
+
+	font-family: 'Lucida Sans Unicode', 'Lucida Grande', sans-serif;
+	font-size: 15px;
+	font-weight: 900;
+	color: #fff;
+}
+.comment span {
+	font-size: 35px;
+	vertical-align: 1px;
+}
+.posted span, .like span {
+	color: #079E6E;
+}
+#button:hover {
+	width: 300px;
+	height: 150px;
+	margin: 0 auto;
+}
+#button:hover .apb {
+	background-color: rgba(48, 63, 159, 1);
+	width: 50px;
+	height: 50px;
+	border-radius: 25px;
+	background-image: url("../assets/images/atplus_green.png");
+	background-repeat: no-repeat;
+	background-position: 8px 13px;
+	background-size: 70%;
+	opacity: .8;
+
+	-webkit-transition: all .5s;
+	-moz-transition: all .5s;
+	transition: all .5s;
+}
+#button:hover #info-bar {
+	width: 110px;
+	height: 110px;
+	border-radius: 55px;
+	opacity: 1;
+	position: absolute;
+	top: -75px;
+	left: 38%;
+
+	cursor: pointer;
+}
+#button:hover .mask {
+	/*background-image: url(assets/images/mask.png);*/
+	opacity: 1;
+	cursor: pointer;
+
+	position: absolute;
+	top: 19px;
+	left: 32%;
+}
+#button:hover .history {
+	/*background-image: url(assets/images/history.png);*/
+	opacity: 1;
+	cursor: pointer;
+
+	position: absolute;
+	top: 56px;
+	left: 29%;
+}
+#button:hover .message {
+	/*background-image: url(assets/images/message.png);*/
+	opacity: 1;
+	cursor: pointer;
+
+	position: absolute;
+	top: 92px;
+	left: 33%;
+}
+#button:hover .setting {
+	/*background-image: url(assets/images/setting.png);*/
+	opacity: 1;
+	cursor: pointer;
+
+	position: absolute;
+	top: 110px;
+	left: 45%;
+}
+#button:hover .sign {
+	/*background-image: url(assets/images/signout.png);*/
+	opacity: 1;
+	cursor: pointer;
+
+	position: absolute;
+	top: 108px;
+	left: 58%;
+}
+
+/*This if for lab 4 css*/
+
+ul li {
+	text-align: center;
+}
+
+.letters {
+	color: #00CCCC;
+	font-size: 20px;
+	margin: 0;
+	padding-top: 4px;
+}
+.unseen {
+	display: none;
+}
+.disabled {
+	background-color: rgba(0,0,0,0.1);
+}
+.enable {
+	background-color: rgba(0,0,0,0.4);
+}

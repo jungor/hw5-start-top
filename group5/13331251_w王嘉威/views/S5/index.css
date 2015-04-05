@@ -1,0 +1,206 @@
+body {
+  font-family: serif; }
+  body #at-plus-container {
+    position: relative; }
+    body #at-plus-container #button {
+      position: relative;
+      left: 400px; }
+      body #at-plus-container #button ul {
+        list-style: none; }
+        body #at-plus-container #button ul li {
+          position: absolute;
+          color: white;
+          font-weight: 900; }
+      body #at-plus-container #button #info-bar {
+        position: absolute;
+        background-position: center;
+        left: 175px;
+        top: 180px;
+        opacity: 0; }
+        body #at-plus-container #button #info-bar .info {
+          border-radius: 50%;
+          background-color: grey;
+          width: 150px;
+          height: 150px; }
+          body #at-plus-container #button #info-bar .info #sum {
+            display: none;
+            text-align: center;
+            position: absolute;
+            left: 47px;
+            top: -10px;
+            font-size: 40pt;
+            color: #079E6E;
+            font-weight: bold; }
+          body #at-plus-container #button #info-bar .info .disappear {
+            display: none; }
+          body #at-plus-container #button #info-bar .info ul {
+            display: none; }
+          body #at-plus-container #button #info-bar .info li {
+            position: absolute;
+            left: 45%;
+            top: 50%; }
+            body #at-plus-container #button #info-bar .info li img {
+              position: relative;
+              top: 5px;
+              margin-right: 10px; }
+          body #at-plus-container #button #info-bar .info .user {
+            left: 50px;
+            right: 10px;
+            bottom: 10px;
+            top: 20px; }
+          body #at-plus-container #button #info-bar .info .comment {
+            left: 40px;
+            right: 10px;
+            bottom: 10px;
+            top: 60px;
+            font-size: 2em; }
+          body #at-plus-container #button #info-bar .info .posted {
+            left: 30px;
+            right: 10px;
+            bottom: 10px;
+            top: 110px; }
+          body #at-plus-container #button #info-bar .info .like {
+            left: 80px;
+            right: 10px;
+            bottom: 10px;
+            top: 108px; }
+          body #at-plus-container #button #info-bar .info .mine {
+            color: #079E6E; }
+      body #at-plus-container #button #info-bar.enable {
+        cursor: pointer; }
+      body #at-plus-container #button #info-bar.disable {
+        cursor: auto; }
+      body #at-plus-container #button #info-bar.show #sum {
+        display: block; }
+      body #at-plus-container #button #control-ring-container {
+        opacity: 0;
+        position: absolute;
+        top: 220px;
+        left: 220px; }
+        body #at-plus-container #button #control-ring-container ul li.enable {
+          background-color: #303f9f;
+          cursor: pointer; }
+        body #at-plus-container #button #control-ring-container ul li.waiting, body #at-plus-container #button #control-ring-container ul li.completed {
+          background-color: grey;
+          cursor: auto; }
+          body #at-plus-container #button #control-ring-container ul li.waiting .unread, body #at-plus-container #button #control-ring-container ul li.completed .unread {
+            display: block; }
+        body #at-plus-container #button #control-ring-container ul li {
+          border-radius: 50%;
+          width: 50px;
+          height: 50px;
+          left: 40%;
+          top: 27%;
+          position: absolute;
+          color: #079E6E; }
+          body #at-plus-container #button #control-ring-container ul li span {
+            left: 20px;
+            top: 15px;
+            position: absolute; }
+          body #at-plus-container #button #control-ring-container ul li img {
+            margin: 25% 20% 20% 25%; }
+          body #at-plus-container #button #control-ring-container ul li .unread {
+            color: white;
+            text-align: center;
+            z-index: 3;
+            position: absolute;
+            left: 35px;
+            top: 0px;
+            padding: 10% 10% 10% 10%;
+            border-radius: 50%;
+            height: 15px;
+            width: 15px;
+            font-size: 12px;
+            background-color: red;
+            display: none; }
+          body #at-plus-container #button #control-ring-container ul li .show {
+            display: block; }
+          body #at-plus-container #button #control-ring-container ul li .hide {
+            display: none; }
+        body #at-plus-container #button #control-ring-container ul li.disable {
+          background-color: grey;
+          cursor: auto; }
+        body #at-plus-container #button #control-ring-container ul li.completed {
+          background-color: grey;
+          cursor: auto; }
+      body #at-plus-container #button .apb {
+        border-radius: 50%;
+        position: absolute;
+        left: 200px;
+        top: 200px;
+        display: inline-block; }
+        body #at-plus-container #button .apb .icon {
+          background-color: grey;
+          background-position: center;
+          display: inline-block;
+          height: 100px;
+          width: 100px;
+          margin: auto;
+          border-radius: 50%; }
+          body #at-plus-container #button .apb .icon img {
+            margin: 25% 20% 20% 20%; }
+      body #at-plus-container #button .apb.clickable {
+        cursor: pointer; }
+      body #at-plus-container #button a.apb.unclickable {
+        cursor: auto; }
+    body #at-plus-container #button:hover {
+      height: 500px;
+      width: 500px; }
+      body #at-plus-container #button:hover #info-bar {
+        opacity: 0;
+        -webkit-animation: info-bar-animate 0.5s ease-in 0s 1 forwards; }
+      body #at-plus-container #button:hover #control-ring-container {
+        -webkit-animation: control-ring-container-animate 0.5s ease-in 0s forwards; }
+      body #at-plus-container #button:hover .mask {
+        -webkit-animation: mask-animate 0.5s ease-in 0s forwards; }
+      body #at-plus-container #button:hover .history {
+        -webkit-animation: history-animate 0.5s ease-in 0s forwards; }
+      body #at-plus-container #button:hover .message {
+        -webkit-animation: message-animate 0.5s ease-in 0s forwards; }
+      body #at-plus-container #button:hover .setting {
+        -webkit-animation: setting-animate 0.5s ease-in 0s forwards; }
+      body #at-plus-container #button:hover .sign {
+        -webkit-animation: sign-animate 0.5s ease-in 0s forwards; }
+      body #at-plus-container #button:hover .icon {
+        -webkit-animation: apb-animate 0.5s ease-in 0s infinite; }
+
+@-webkit-keyframes info-bar-animate {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1;
+    top: 0px; } }
+@-webkit-keyframes control-ring-container-animate {
+  0% {
+    display: block;
+    opacity: 0; }
+  100% {
+    opacity: 1;
+    left: 170px;
+    top: 200px; } }
+@-webkit-keyframes apb-animate {
+  0% {
+    background-color: #303f9f; }
+  100% {
+    background-color: #303f9f; } }
+@-webkit-keyframes mask-animate {
+  100% {
+    left: -250%;
+    top: -350%; } }
+@-webkit-keyframes history-animate {
+  100% {
+    left: -330%; } }
+@-webkit-keyframes message-animate {
+  100% {
+    left: -270%;
+    top: 500%; } }
+@-webkit-keyframes setting-animate {
+  100% {
+    left: -100%;
+    top: 800%; } }
+@-webkit-keyframes sign-animate {
+  100% {
+    left: 120%;
+    top: 900%; } }
+
+/*# sourceMappingURL=index.css.map */
