@@ -1,0 +1,207 @@
+#bottom-positioner {
+	position: fixed;
+  top: 55%;
+  left: 45%;
+  height: 250px;
+  width: 250px;
+  border-radius: 100%;
+}
+
+#info-bar {
+	overflow: hidden;
+	border-radius: 50%;
+	width: 110px;
+	height: 110px;
+	position: absolute;
+}
+
+#info-bar span {
+  font-size: 30px;
+  position: relative;
+  top: 30px;
+  left: 30px;
+  color: #2DD99A;
+  font-family: Arial;
+  font-weight: bold;
+  font-size: 35px;
+}
+
+#control-ring-container {
+	position: absolute;
+}
+
+#control-ring-container div {
+	display: block;
+	position: absolute;
+}
+
+#button {
+	width: 20px;
+	height: 20px;
+  position: absolute;
+  top: 60%;
+  left: 45%;
+}
+
+.icon {
+	background:url("assets/images/atplus_white.png") no-repeat 50% 50%;
+	background-color: #079E6E;
+	width:20px;
+	height: 20px;
+  border: 2px solid #079E6E;
+  background-size: contain;
+	border-radius: 50%;
+	transition: all 0.5s ease-in-out;
+}
+
+#button:hover {
+}
+
+#button:hover .icon{
+	border-radius: 50%;
+	height: 32px;
+	width: 32px;
+	background:url("assets/images/atplus_green.png") no-repeat 50% 50%;
+  border: 8px solid #2C39A2;
+  background-size: contain;
+	background-color: #2C39A2;
+}
+
+#info-bar {
+  transform: scale(0.1);
+  transition: all 0.5s ease-in-out;
+  left: -30px;
+  top: 0;
+  opacity: 0;
+}
+
+.info-bar {
+    background-color: gray;
+}
+
+#button:hover #info-bar{
+  transform: scale(1);
+  opacity: 1;
+  left: -25px;
+  top: -118px;
+}
+
+.button {
+  transform: scale(0.5);
+  transition: all 0.5s ease-in-out;
+  border-radius: 50%;
+  left: 0;
+  top: 0;
+  opacity: 0;
+  width: 15px;
+  height: 15px;
+  background-color: gray;
+}
+
+.enabled {
+  background-color: #21479B;
+}
+
+.disabled {
+  background-color: gray;
+}
+
+.waiting {
+  background-color: #21479B;
+}
+
+.finish {
+  background-color: gray;
+}
+
+.display {
+  visibility: visible;
+}
+
+.nodisplay {
+  visibility: hidden;
+}
+
+.button span {
+  position: relative;
+  top: 6px;
+  left: 8px;
+  color: #21958A;
+  font-family: Arial;
+  font-weight: bold;
+  font-size: 20px;
+  z-index:-1;
+}
+
+.number {
+  font-family: Arial;
+  position: relative;
+  left: 18px;
+  top: -5px;
+  font-weight: bold;
+  color: white;
+	padding-left: 3px;
+	padding-right: 3px;
+	text-align: center;
+	background-color: #FA3F3A;
+  border-radius: 100%;
+}
+
+
+#button:hover .mask {
+  width: 30px;
+  height: 30px;
+  transform: scale(1);
+  left: -53px;
+  top: -29px;
+  opacity: 1;
+}
+
+#button:hover .history{
+  width: 30px;
+  height: 30px;
+  transform: scale(1);
+  left: -65px;
+  top: 10px;
+  opacity: 1;
+}
+
+#button:hover .message {
+  width: 30px;
+  height: 30px;
+  transform: scale(1);
+  left: -50px;
+  top: 49px;
+  opacity: 1;
+}
+
+#button:hover .setting {
+  transform: scale(1);
+  width: 30px;
+  height: 30px;
+  left: -15px;
+  top: 72px;
+  opacity: 1;
+}
+
+#button:hover .sign{
+  transform: scale(1);
+  width: 30px;
+  height: 30px;
+  left: 30px;
+  top: 70px;
+  opacity: 1;
+}
+
+#holding {
+  position: relative;
+}
+
+#button:hover #holding {
+  top: -195px;
+  left: -111px;
+  height: 250px;
+  width: 250px;
+  border-radius: 100%;
+  z-index:-2;
+}
