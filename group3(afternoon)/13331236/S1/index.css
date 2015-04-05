@@ -1,0 +1,181 @@
+li {
+    list-style: none;
+    color: #FFF;
+}
+
+#at-plus-container {
+    margin: auto;
+    position: relative;
+    top: 200px;
+    height: 200px;
+    width: 200px;
+}
+
+#bottom-positioner {
+    margin: auto;
+    position: relative;
+    top: 100px;
+    height: 200px;
+    width: 200px;
+}
+
+#button {
+    background-color: #FCC;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    margin: auto;
+    position: relative;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#button:hover {
+}
+
+.info {
+    width: 10px;
+    height: 10px;
+    margin-left: 13px;
+    margin-top: -10px;
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, 0);
+    overflow: hidden;
+    position: absolute;
+    -webkit-transition: width 0.5s, height 0.5s, background-color 0.5s, margin-left 0.5s, margin-top 0.5s;
+    -webkit-transition-delay: 1s;
+}
+
+#button:hover .info {
+    margin-left: -70px;
+    margin-top: -225px;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.6);
+    width: 175px;
+    height: 175px;
+    -webkit-transition: width 0.5s, height 0.5s, background-color 0.5s, margin-left 0.5s, margin-top 0.5s;
+}
+
+#sum {
+    font-size: 75px;
+    color: #FFF;
+    position: absolute;
+    margin-top: 50px;
+    margin-left: 50px;
+    visibility: hidden;
+}
+
+#control-ring li {
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    display: inline-block;
+    height: 35px;
+    width: 35px;
+    border-radius: 100%;
+    background-color: rgba(48, 63, 159, 0);
+    text-align: center;
+    -webkit-transition: transform 0.5s, background-color 0.5s;
+    -webkit-transition-delay: 1s;
+}
+
+#control-ring .number{
+    font-size: 20px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: rgba(7, 158, 110, 0);
+    -webkit-transition: color 0.5s;
+    -webkit-transition-delay: 1s;
+}
+
+#button:hover #control-ring .number {
+    color: rgba(7, 158, 110, 1);
+    -webkit-transition: color 0.5s;
+}
+
+#button:hover #control-ring .li {
+    color: rgba(7, 158, 110, 1);
+    -webkit-transition: color 0.5s;
+}
+
+#button:hover .mask {
+    background-color: rgba(48, 63, 159, 1);
+    transform: translate(-50px, -50px);
+    -webkit-transition: transform 0.5s, background-color 0.5s;
+}
+
+#button:hover .history {
+    background-color: rgba(48, 63, 159, 1);
+    transform: translate(-75px, 0px);
+    -webkit-transition: transform 0.5s, background-color 0.5s;
+}
+
+#button:hover .message {
+    background-color: rgba(48, 63, 159, 1);
+    transform: translate(-50px, 50px);
+    -webkit-transition: transform 0.5s, background-color 0.5s;
+}
+
+#button:hover .setting{
+    background-color: rgba(48, 63, 159, 1);
+    transform: translate(0px, 75px);
+   -webkit-transition: transform 0.5s, background-color 0.5s;
+}
+
+#button:hover .sign {
+    background-color: rgba(48, 63, 159, 1);
+    transform: translate(50px, 50px);
+    -webkit-transition: transform 0.5s, background-color 0.5s;
+}
+
+.icon {
+    position: absolute;
+    height: 35px;
+    width: 35px;
+    left: 0px;
+    top: 0px;
+    border-radius: 50%;
+    background-color: rgba(255, 200, 200, 0);
+    background-image: url('assets/images/atplus_white.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    -webkit-transition: width 0.5s, height 0.5s, background-color 0.5s, background-image 0.5s, left 0.5s, top 0.5s;
+    -webkit-transition-delay: 1s;
+}
+
+#button:hover .icon{
+    position: absolute;
+    height: 75px;
+    width: 75px;
+    left: -20px;
+    top: -20px;
+    border-radius: 50%;
+    background-color: rgba(48, 63, 159, 1);
+    background-image: url('assets/images/atplus_green.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    -webkit-transition: width 0.5s, height 0.5s, background-color 0.5s, background-image 0.5s, left 0.5s, top 0.5s;
+}
+
+#button:hover .disabled {
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+#button:hover .enabled {
+    background-color: rgba(48, 63, 159, 1);
+}
+
+.unread {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: #C00;
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    color: #FFF;
+    font-size: 8px;
+    padding: 5px;
+    visibility: hidden;
+}
