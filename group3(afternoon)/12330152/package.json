@@ -3,12 +3,12 @@
   "version": "1.0.0",
   "description": "hw5-start-top",
   "main": "gulpfile.js",
-  "dependencies": {
+  "dependencies": {},
+  "devDependencies": {
     "gulp-jade": "^1.0.0",
     "gulp-livescript": "^2.3.0",
     "gulp": "^3.8.11"
   },
-  "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js"
