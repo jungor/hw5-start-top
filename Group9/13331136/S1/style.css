@@ -1,0 +1,180 @@
+body {
+	margin: 0;
+	padding: 0;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+li {
+	list-style: none;
+}
+
+#bottom-positioner {
+	margin: 0 auto;
+	width: 32px;
+	height: 32px;
+	border-radius: 50%;
+	/*border: 1px solid red;*/
+	transition: all 0.6s ease-in-out 0.6s;
+}
+
+#bottom-positioner {
+	margin: 350px auto 0 auto;
+	position: relative;
+}
+
+.icon {
+	position: absolute;
+	margin-top: -16px;
+	background-image: url("assets/images/atplus_white.png");
+	background-color: #9BA0D8;
+	background-repeat: no-repeat;
+	background-position:center;
+	width: 32px;
+	height: 32px;
+	border-radius: 50%;
+	cursor: pointer;
+	transition: all 0.6s ease-in-out 0.6s;
+}
+
+.info {
+	background-color: #7E7E7E;
+	width: 32px;
+	height: 32px;
+	border-radius: 50%;
+	overflow: hidden;
+	position: absolute;
+	left: 50%;
+	top: 0;
+	margin-left: -16px;
+	opacity: 0;
+	transition: all 0.6s ease-in-out 0.6s;
+}
+
+.info span {
+	font-size: 30px;
+	font-weight: bold;
+	color: #2ED889;
+	display: block;
+	vertical-align: baseline;
+	text-align: center;
+	margin-top: 40px;
+	overflow: hidden;
+}
+
+
+.button {
+	font-size: 25px;
+	color: #20927F;
+	background-color: #2D3AA4;
+	background-repeat: no-repeat;
+	background-position: 10px 10px;
+	width: 42px;
+	height: 42px;
+	border-radius: 50%;
+	position: absolute;
+	left: 50%;
+	margin-left: -21px;
+	margin-top: -20px;
+	opacity: 0;
+	z-index: -98;
+	line-height: 42px;
+	vertical-align: middle;
+	text-align: center;
+	cursor: pointer;
+}
+
+.button span {
+	display: block;
+	font-size: 15px;
+	color: #fff;
+	width: 20px;
+	height: 20px;
+	position: absolute;
+	left: 25px;
+	top: -5px;
+	line-height: 20px;
+	vertical-align: middle;
+	text-align: center;
+	background-color: red;
+	border-radius: 50%;
+}
+
+.mask {
+	transition: transform 0.6s ease-in-out 0.6s, opacity 0.6s ease-in-out 0.6s;
+}
+
+.history {
+	transition: transform 0.6s ease-in-out 0.6s, opacity 0.6s ease-in-out 0.6s;
+}
+
+.message {
+	transition: transform 0.6s ease-in-out 0.6s, opacity 0.6s ease-in-out 0.6s;
+}
+
+
+.setting {
+	transition: transform 0.6s ease-in-out 0.6s, opacity 0.6s ease-in-out 0.6s;
+}
+
+.sign {
+	transition: transform 0.6s ease-in-out 0.6s, opacity 0.6s ease-in-out 0.6s;
+}
+
+
+#bottom-positioner:hover {
+	height: 280px;
+	width: 280px;
+	transform: translate(0px, -120px);
+}
+
+
+#bottom-positioner:hover .icon {
+	background-color: rgba(45, 58, 164, 1);
+	background-image: url("assets/images/atplus_green.png");
+	background-repeat: no-repeat;
+	background-position:center;
+	height: 60px;
+	width: 60px;
+	margin-left: 112px;
+	margin-top: 92px;
+	background-size: 40px 28.5px;
+}
+
+#bottom-positioner:hover .info {
+	height: 150px;
+	width: 150px;
+	opacity: 1;
+	top: -90px;
+	left: 50%;
+	margin-left: -72px;
+}
+
+#bottom-positioner:hover .mask {
+	opacity: 1;
+	transform: translate(-75px, 85px);
+	/*border: 1px solid blue;*/
+}
+
+#bottom-positioner:hover .history {
+	opacity: 1;
+	transform: translate(-98px, 137px);
+	/*border: 1px solid orange;*/
+}
+
+#bottom-positioner:hover .message {
+	opacity: 1;
+	transform: translate(-75px, 187px);
+	/*border: 1px solid blue;*/
+}
+
+#bottom-positioner:hover .setting {
+	opacity: 1;
+	transform: translate(-28px, 215px);
+	/*border: 1px solid blue;*/
+}
+
+#bottom-positioner:hover .sign {
+	opacity: 1;
+	transform: translate(30px, 210px);
+	/*border: 1px solid blue;*/
+}
