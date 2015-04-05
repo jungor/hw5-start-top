@@ -1,0 +1,264 @@
+* {
+	margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+}
+
+ul li {
+    list-style: none;
+}
+
+#at-plus-container {
+	position: relative;
+	transition: all .7s;
+}
+
+#bottom-positioner {
+	position: fixed;
+	bottom: 100px;
+	left: 50%;
+	width: 35px;
+	height: 35px;
+	cursor: default;
+	transition: all .7s;
+}
+
+#button {
+	position: absolute;
+	top: 0;
+	left: 0;
+	transition: all .7s;
+}
+
+.button {
+	background-size: 15px;
+    background-position: center;
+    background-repeat: no-repeat;
+	transition: all .7s;
+}
+
+.apb {
+	position: absolute;
+	width: 35px;
+	height: 35px;
+	background-color: rgba(0,0,70,.4);
+	left: 0;
+	top: 0;
+	border-radius: 50%;
+	transition: all .7s 0.5s;
+	cursor: pointer;
+}
+
+.icon {
+	width: 100%;
+	height: 100%;
+	background-image: url("assets/images/atplus_white.png");
+	background-size: 30px;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: all .7s 0.5s;
+}
+
+ul {
+	position: absolute;
+	height: 120px;
+	width: 120px;
+	margin: 0;
+	padding: 0;
+}
+
+.info {
+	height: 120px;
+	width: 120px;
+}
+
+.info span {
+	margin-left: 5px;
+	vertical-align: middle;
+	display: inline-block; 
+}
+
+.info img {
+	vertical-align: middle;
+	display: inline-block; 
+	width: 25px;
+	height: 25px;
+}
+
+.unread {
+	position: absolute;
+	width: 15px;
+	height: 15px;
+	opacity: 1;
+	border-radius: 50%;
+	background-color: red;
+	left: 20px;
+	top: -5px;
+	font-size: 13px;
+	text-align: center;
+	transition: all .7s;
+}
+
+#info-bar {
+	position: absolute;
+	width: 35px;
+	height: 35px;
+	background-color: rgba(0,0,15,.4);
+	left: 0;
+	top: 0;
+	border-radius: 50%;
+	opacity: 0;
+	transition: all .7s;
+	font-size: 15px;
+	color: rgb(91, 200, 153);
+	text-align: center;
+	font-weight: bold;
+	line-height: 65px;
+}
+
+.info li {
+	position: absolute;
+	left: 0;
+	top: 0;
+	transition: all .7s;
+}
+
+#control-ring li {
+	position: absolute;
+	width: 35px;
+	height: 35px;
+	left: 0;
+	top: 0;
+	background-color: rgba(0,0,15,.4);
+	border-radius: 50%;
+	opacity: 0;
+	transition: all .7s;
+}
+
+#bottom-positioner:hover {
+	width: 200px;
+	height: 300px;
+	left: calc(50% - 100px);
+	bottom: 0;
+}
+
+#bottom-positioner:hover .icon {
+	background-image: url("assets/images/atplus_green.png");
+	background-size: 45px;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: all .7s;
+}
+
+#bottom-positioner:hover .apb {
+	width: 50px;
+	height: 50px;
+	top: -5px;
+	left: -5px;
+	border-radius: 50%;
+	background-color: rgba(48,63,159,1);
+	transition: all .7s;
+}
+
+#bottom-positioner:hover #button {
+	left: 100px;
+	top: 165px;
+}
+
+#bottom-positioner:hover #info-bar {
+	width: 120px;
+	height: 120px;
+	opacity: 1;
+	border-radius: 50%;
+	top: -140px;
+    left: -40px;
+}
+
+#bottom-positioner:hover .button {
+    width: 30px;
+	height: 30px;
+	opacity: 1;
+	border-radius: 50%;
+}
+
+#bottom-positioner:hover .mask {
+	left: -40px;
+	top: -25px;
+}
+
+#bottom-positioner:hover .history {
+	left: -53px;
+	top: 11px;
+}
+
+#bottom-positioner:hover .message {
+	left: -40px;
+	top: 45px;
+}
+
+#bottom-positioner:hover .setting {
+	left: -5px;
+	top: 58px;
+}
+
+#bottom-positioner:hover .sign {
+	left: 32px;
+	top: 55px;
+}
+
+#bottom-positioner:hover .user {
+	position: absolute;
+	font-weight: bold;
+	color: white;
+	text-align: center;
+	left: 43px;
+	top: 10px;
+}
+
+#bottom-positioner:hover .comment {
+	position: absolute;
+	top: 37px;
+	left: 40px;
+	font-weight: bold;
+	color: white;
+	font-size: 30px;
+}
+
+#bottom-positioner:hover .posted {
+	position: absolute;
+	top: 77px;
+	left: 20px;
+	color: green;
+	font-weight: bold;
+}
+
+#bottom-positioner:hover .like {
+	position: absolute;
+	top: 77px;
+	left: 65px;
+	color: green;
+	font-weight: bold;
+}
+
+#control-ring li {
+	text-align: center;
+	font-size: 23px;
+	font-weight: bold;
+	font-family: "Grotesque";
+	color: rgb(91, 200, 153);
+
+}
+
+.clickable {
+	cursor: pointer;
+	background-color: rgb(35, 72, 153)!important;
+}
+
+.clicked {
+
+}
