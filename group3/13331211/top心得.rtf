@@ -1,0 +1,23 @@
+TOP 实践心得
+
+用TOP打代码感到思路很清晰，因为打高层函数的时候不必在意底层怎样实现，但是因为bug比较多，最后调试的都不像top了，而且还是没有在S2-S5中实现计算器重置。不过至少是摸索了一下。这次实现的主要思路是：
+
+S1:  
+      第一层：
+       	add-click-listener-for-all-little-buttons   
+       	set-unvisible-all-unreads!			     
+       	disable-blg-bubble
+      第二层：
+	bubble-listener
+      第三层：
+	get-ran
+	check-and-set： 	回调函数，设置得到随机数后的style并判断是否enable-big-bubble
+      第四层：
+	bubble-listener，enable，disable等底层函数
+S2-S4：
+      第一层和第二层之间加了一层robot
+S5：
+      bubble-listener 被分为 ah，bh，ch，dh，eh等五个handler
+
+      在S4，S5中每个handler都再次调用了robot
+       
