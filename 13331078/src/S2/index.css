@@ -1,0 +1,127 @@
+li {
+	list-style-type: none;
+}
+li, span, #bottom-positioner, .icon, .info, #order {
+	position: absolute;
+}
+#bottom-positioner {
+	left: 40%;
+	top: 20%;
+	width: 300px;
+	height: 500px;
+}
+.info {
+	border-radius: 50%;
+	background-color: blue;
+	width: 50px;
+	height: 50px;
+	left: 48%;
+	top: 60%;
+	visibility: hidden;
+	-webkit-transition: left 0.4s, top 0.4s, width 0.4s, height 0.4s, visibility 0.2s, background-color 0.4s;
+}
+#result {
+	height: 80px;
+	line-height: 80px;
+	color: #43f974;
+	font-size: 40px;
+}
+#order {
+	color: #43f974;
+	font-size: 30px;
+	top: -100px;
+}
+.button {
+	width: 50px;
+	height: 50px;
+	left: 48%;
+	top: 60%;
+	border-radius: 50%;
+	background-color: blue;
+	visibility: hidden;
+	-webkit-transition: left 0.4s, top 0.4s, visibility 0.4s, background-color 0.4s;
+}
+.banned {
+	background-color: gray;
+}
+.tip {
+	color: white;
+	padding: 3px;
+	width: 20px;
+	height: 20px;
+	border-radius: 50%;
+	background-color: red;
+	right: 15px;
+	visibility: hidden;
+}
+.tag {
+	color: #43f974;
+	width: 50px;
+	height: 50px;
+	top: 25%;
+	font-size: 25px;
+}
+.tip, .tag, #result, #order {
+	text-align: center;
+	font-weight: bold;
+	font-family: Arial;
+}
+.icon {
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	background-color: gray;
+	background-image: url("assets/images/atplus_white.png");
+	background-repeat: no-repeat;
+	background-position: center;
+	left: 48%;
+	top: 60%;
+	-webkit-transition: width 0.5s, height 0.5s, background-color 1s;
+}
+#button:hover .icon {
+	width: 70px;
+	height: 70px;
+	background-color: blue;
+	background-image: url("assets/images/atplus_green.png");
+	background-size: 70%;
+}
+#button:hover .info {
+	width: 150px;
+	height: 150px;
+	left: 100px;
+	top: 120px;
+	visibility: visible;
+}
+#button:hover .button {
+	visibility: visible;
+}
+#button:hover .A {
+	left: 25%;
+	top: 49%;
+}
+#button:hover .B {
+	left: 18%;
+	top: 60%;
+}
+#button:hover .C {
+	left: 25%;
+	top: 72%;
+}
+#button:hover .D {
+	left: 46%;
+	top: 78%;
+}
+#button:hover .E {
+	left: 67%;
+	top: 75%;
+}
+#button:hover .tip {
+	right: -5px;
+}
+.tag, .tip:hover, #result {
+	cursor: default;
+}
+#button:hover {
+	width: 280px;
+	height: 440px;
+}
