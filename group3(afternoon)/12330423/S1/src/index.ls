@@ -1,14 +1,4 @@
-window.onload = ->
-  IDS = <[A B C D E]>
-  @CLICKED = []
-  @NUMBERS = []
-  @button = document.getElementById('button')
-  @btns = [document.getElementsByClassName(ID)[0] for ID in IDS]
-
-  button.setAttribute('onmouseleave', 'setTimeout("reset()", 1000)');
-  for btn in btns
-    btn.setAttribute('onclick', 'getRandomNum(this)')
-
+window.onload = -> reset()
 
 @get-random-num = (btn) ->
   @CLICKED ++= [btn]
@@ -29,43 +19,33 @@ window.onload = ->
       check-ready()
 
 
-disable-other-btn = ->
-  for btn in btns when btn not in CLICKED
-    disable-btn(btn)
+enable-btn = (btn) -> btn.setAttribute('onclick', 'getRandomNum(this)'); btn.style.backgroundColor = \blue
+disable-btn = (btn) -> btn.setAttribute('onclick', ''); btn.style.backgroundColor = \#666
 
+disable-other-btn = -> [disable-btn(btn) for btn in btns when btn not in CLICKED]
+enable-other-btn = -> for btn in btns
+    if btn not in CLICKED => enable-btn(btn)
+    else disable-btn(btn)
 
-enable-other-btn = ->
-  for btn in btns
-    if btn not in CLICKED
-      btn.setAttribute('onclick', 'getRandomNum(this)')
-      btn.style.backgroundColor = \blue
-    else
-      disable-btn(btn)
-
-
-disable-btn = (btn) ->
-  btn.setAttribute('onclick', '')
-  btn.style.backgroundColor = \#666
-
-
-check-ready = ->
-  if NUMBERS.length == 5
-    document.getElementById('info-bar').setAttribute('onclick', 'showSum()')
-
+check-ready = -> $('#info-bar')[0].setAttribute('onclick', 'showSum()') if NUMBERS.length == 5
 
 @show-sum = ->
   result = 0
-  sumSpan = document.getElementById('sum')
   for item in NUMBERS
     result += item
+  sumSpan = $('#sum')[0]
   sumSpan.innerText = result
   sumSpan.style.opacity = 1
 
 
 @reset = ->
-  window.onload()
+  @CLICKED = []
+  @NUMBERS = []
+  @button = $('#button')[0]
+  @btns = [$('.' ++ ID)[0] for ID in <[A B C D E]>]
+  button.setAttribute('onmouseleave', 'setTimeout("reset()", 1000)')
   enable-other-btn()
-  document.getElementById('sum').style.opacity = 0
+  $('#sum')[0].style.opacity = 0
   for btn in btns
+    $('#info-bar')[0].setAttribute('onclick', '')
     btn.getElementsByClassName('num')[0].style.opacity = 0
-    document.getElementById('info-bar').setAttribute('onclick', '')
