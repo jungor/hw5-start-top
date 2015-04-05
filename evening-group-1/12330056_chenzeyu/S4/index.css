@@ -1,0 +1,132 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-transition: all 1s ease-in-out;
+  -moz-transition: all 1s ease-in-out;
+  -ms-transition: all 1s ease-in-out;
+  -o-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
+}
+.unread .total {
+  -webkit-transition: all 0 ease 0;
+  -moz-transition: all 0 ease 0;
+  -ms-transition: all 0 ease 0;
+  -o-transition: all 0 ease 0;
+  transition: all 0 ease 0;
+}
+body {
+  font-family: "Microsoft YaHei";
+  text-align:  center;
+  font-weight: bold;
+}
+li {
+  list-style-type: none;
+}
+#info-bar {
+  opacity: 0;
+  width: 0;
+  height: 0;
+  left: 50%;
+  overflow: hidden;
+  position: absolute;
+  bottom: 200px;
+  margin-left: 10px;
+  border-radius:50%;
+  background-color: #7e7e7e;
+}
+#bottom-positioner:hover #info-bar {
+  width: 130px;
+  opacity: 1;
+  height: 130px;
+  bottom: 270px;
+  margin-left: -50px;
+}
+.info {
+  font-size: 40px;
+  color: #079E6E;
+  position: relative;
+  top: 40px;
+}
+.total {
+  visibility: hidden;
+}
+
+#control-ring-container li {
+  border-radius: 50%;
+  position: absolute;
+  height: 35px;
+  width: 35px;
+  left: 50%;
+  bottom: 200px;
+  opacity: 0;
+}
+
+#bottom-positioner:hover #control-ring-container li {
+  opacity: 1;
+}
+#bottom-positioner:hover .mask {
+  margin-left: -60px;
+  bottom: 240px;
+}
+#bottom-positioner:hover .history {
+  margin-left: -75px;
+  bottom: 190px;
+}
+#bottom-positioner:hover .message {
+  margin-left: -55px;
+  bottom: 150px;
+}
+#bottom-positioner:hover .setting {
+  margin-left: -15px;
+  bottom: 125px;
+}
+#bottom-positioner:hover .sign {
+  margin-left: 30px;
+  bottom: 140px;
+}
+.button {
+  background-color: blue;
+  color: #339900;
+  padding: auto;
+  cursor: pointer;
+}
+.word {
+  position: absolute;
+  left: 10px;
+  top: 8px;
+  font-size: 20px;
+}
+.unread {
+  position: relative;
+  display: block;
+  color: white;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  left: 20px;
+  top: -5px;
+  background-color: red;
+  visibility: hidden;
+}
+.apb {
+  position: absolute;
+  width: 35px;
+  height: 35px;
+  background: url("assets/images/atplus_white.png") no-repeat center;
+  background-color: #999FD3;
+  left: 50%;
+  bottom: 200px;
+  border-radius: 50%;
+}
+#bottom-positioner:hover .apb {
+  width: 80px;
+  height: 80px;
+  bottom: 180px;
+  background: url("assets/images/atplus_green.png") no-repeat center;
+  background-color: #303f9f;
+  margin-left: -20px;
+}
+#bottom-positioner:hover  #button {
+  width: 250px;
+  height: 250px;
+}

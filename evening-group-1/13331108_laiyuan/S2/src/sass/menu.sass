@@ -1,0 +1,150 @@
+@mixin _transition($lower_forth, $upper_forth)
+  transition: all 0.5s
+  -moz-transition: all 0.5s
+  -webkit-transition: all 0.5s
+  -o-transition: all 0.5s
+  transition-timing-function: cubic-bezier(0, $lower_forth, $upper_forth, 1)
+  -moz-transition-timing-function: cubic-bezier(0, $lower_forth, $upper_forth, 1)
+  -webkit-transition-timing-function: cubic-bezier(0, $lower_forth, $upper_forth, 1)
+  -o-transition-timing-function: cubic-bezier(0, $lower_forth, $upper_forth, 1)
+
+@mixin _position($property, $top, $right, $bottom, $left)
+  position: $property
+  top: $top
+  right: $right
+  bottom: $bottom
+  left: $left
+
+@mixin _size($width, $height)
+  width: $width
+  height: $height
+
+div#at-plus-container
+  div#button
+    @include _position(absolute, null, null, 70px, 50%)
+    @include _size(64px, 64px)
+    @include _transition(0.20, 0.55)
+    cursor: pointer
+    .apb
+      @include _size(50px, 50px)
+      transition: all 0.5s ease-in-out 0.5s
+      position: absolute
+      background-color: rgba(48, 63, 159, 1)
+      border-radius: 50%
+    .icon
+      @include _size(35px, 25px)
+      @include _position(absolute, 11px, null, null, 8px)
+      background-image: url('../../assets/images/atplus_green.png')
+      background-size: 35px 25px
+      background-repeat: no-repeat
+    &:not(:hover)
+      .apb
+        z-index: 10001
+        transform: scale(0.5)
+        opacity: 0.5
+      .icon
+        transition: all 0 ease-in-out 0.5s
+        transform: scale(1.2)
+        left: 0.6rem
+        background-image: url('../../assets/images/atplus_white.png')
+    &:hover
+      div.apb
+        @include _transition(0.20, 0.55)
+      #control-ring-container
+        li.button
+          background-color: rgba(48, 63, 159, 1)
+          opacity: 1
+          &:nth-child(1)
+            margin-top: 23px
+            margin-left: 9px
+          &:nth-child(2)
+            margin-top: 5px
+            margin-left: 0
+          &:nth-child(3)
+            margin-left: 15px
+            margin-top: 5px
+          &:nth-child(4)
+            margin-left: 46px
+            margin-top: -10px
+          &:nth-child(5)
+            margin-left: 89px
+            margin-top: -35px
+      div#info-bar
+        top: -140px
+        left: -34px
+        @include _size(128px, 128px)
+        opacity: 1
+        z-index: 10000
+    div#control-ring-container
+      @include _size(160px, 160px)
+      border-radius: 50%
+      @include _position(absolute, -66px, null, null, -56px)
+      ul
+        padding: 0
+        padding-top: 8px
+        li.button
+          @include _size(32px, 32px)
+          @include _transition(0.20, 0.55)
+          display: block
+          list-style: none
+          opacity: 0
+          border-radius: 50%
+          text-align: center
+          background-size: 16px 16px
+          background-position: center
+          background-repeat: no-repeat
+          margin-left: 64px
+          margin-top: -32px
+          span.button-id
+            font-size: 24px
+            color: #079E6E
+          span.unread
+            @include _size(19px, 17px)
+            @include _position(relative, -34px, null, null, 20px)
+            font-size: 0.8rem
+            opacity: 0
+            display: block
+            font-size: 0.8rem
+            color: #DCDCDC
+            padding-top: 2px
+            vertical-align: bottom
+            border-radius: 50%
+            background-color: #FF3A3A
+          &:nth-child(1)
+            margin-top: 54px
+          &:hover, &.on
+            background-color: rgba(48, 63, 159, 1)
+          &.on:nth-child(1)
+            background-image: url('../../assets/images/mask.png')
+    #info-bar
+      @include _position(absolute, 32px, null, null, 32px)
+      @include _size(0, 0)
+      @include _transition(0.20, 0.55)
+      color: #FFF
+      background-color: rgba(68, 68, 68, 0.68)
+      font-size: 100%
+      text-align: center
+      overflow: hidden
+      border-radius: 50%
+      ul
+        margin: 10% 0
+        padding: 0
+      li
+        list-style: none
+        img
+          margin-right: 8px
+          vertical-align: middle
+      li.mine
+        color: #079E6E
+        display: inline
+      li.page.comment
+        color: #079E6E
+        font-size: 250%
+        margin-top: 35%
+        margin-bottom: 6%
+        img
+          @include _size(20%, 20%)
+          margin-right: 8%
+      li.mine.like
+        margin-left: 5%
+

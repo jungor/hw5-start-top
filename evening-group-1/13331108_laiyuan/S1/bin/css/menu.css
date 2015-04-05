@@ -1,0 +1,173 @@
+div#at-plus-container div#button {
+  position: absolute;
+  bottom: 70px;
+  left: 50%;
+  width: 64px;
+  height: 64px;
+  transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition-timing-function: cubic-bezier(0, 0.2, 0.55, 1);
+  -moz-transition-timing-function: cubic-bezier(0, 0.2, 0.55, 1);
+  -webkit-transition-timing-function: cubic-bezier(0, 0.2, 0.55, 1);
+  -o-transition-timing-function: cubic-bezier(0, 0.2, 0.55, 1);
+  cursor: pointer; }
+  div#at-plus-container div#button .apb {
+    width: 50px;
+    height: 50px;
+    transition: all 0.5s ease-in-out 0.5s;
+    position: absolute;
+    background-color: #303f9f;
+    border-radius: 50%; }
+  div#at-plus-container div#button .icon {
+    width: 35px;
+    height: 25px;
+    position: absolute;
+    top: 11px;
+    left: 8px;
+    background-image: url("../../assets/images/atplus_green.png");
+    background-size: 35px 25px;
+    background-repeat: no-repeat; }
+  div#at-plus-container div#button:not(:hover) .apb {
+    z-index: 10001;
+    transform: scale(0.5);
+    opacity: 0.5; }
+  div#at-plus-container div#button:not(:hover) .icon {
+    transition: all 0 ease-in-out 0.5s;
+    transform: scale(1.2);
+    left: 0.6rem;
+    background-image: url("../../assets/images/atplus_white.png"); }
+  div#at-plus-container div#button:hover div.apb {
+    transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    transition-timing-function: cubic-bezier(0, 0.2, 0.55, 1);
+    -moz-transition-timing-function: cubic-bezier(0, 0.2, 0.55, 1);
+    -webkit-transition-timing-function: cubic-bezier(0, 0.2, 0.55, 1);
+    -o-transition-timing-function: cubic-bezier(0, 0.2, 0.55, 1); }
+  div#at-plus-container div#button:hover #control-ring-container li.button {
+    background-color: #303f9f;
+    opacity: 1; }
+    div#at-plus-container div#button:hover #control-ring-container li.button:nth-child(1) {
+      margin-top: 23px;
+      margin-left: 9px; }
+    div#at-plus-container div#button:hover #control-ring-container li.button:nth-child(2) {
+      margin-top: 5px;
+      margin-left: 0; }
+    div#at-plus-container div#button:hover #control-ring-container li.button:nth-child(3) {
+      margin-left: 15px;
+      margin-top: 5px; }
+    div#at-plus-container div#button:hover #control-ring-container li.button:nth-child(4) {
+      margin-left: 46px;
+      margin-top: -10px; }
+    div#at-plus-container div#button:hover #control-ring-container li.button:nth-child(5) {
+      margin-left: 89px;
+      margin-top: -35px; }
+  div#at-plus-container div#button:hover div#info-bar {
+    top: -140px;
+    left: -34px;
+    width: 128px;
+    height: 128px;
+    opacity: 1;
+    z-index: 10000; }
+  div#at-plus-container div#button div#control-ring-container {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    position: absolute;
+    top: -66px;
+    left: -56px; }
+    div#at-plus-container div#button div#control-ring-container ul {
+      padding: 0;
+      padding-top: 8px; }
+      div#at-plus-container div#button div#control-ring-container ul li.button {
+        width: 32px;
+        height: 32px;
+        transition: all 0.5s;
+        -moz-transition: all 0.5s;
+        -webkit-transition: all 0.5s;
+        -o-transition: all 0.5s;
+        transition-timing-function: cubic-bezier(0, 0.2, 0.55, 1);
+        -moz-transition-timing-function: cubic-bezier(0, 0.2, 0.55, 1);
+        -webkit-transition-timing-function: cubic-bezier(0, 0.2, 0.55, 1);
+        -o-transition-timing-function: cubic-bezier(0, 0.2, 0.55, 1);
+        display: block;
+        list-style: none;
+        opacity: 0;
+        border-radius: 50%;
+        text-align: center;
+        background-size: 16px 16px;
+        background-position: center;
+        background-repeat: no-repeat;
+        margin-left: 64px;
+        margin-top: -32px; }
+        div#at-plus-container div#button div#control-ring-container ul li.button span.button-id {
+          font-size: 24px;
+          color: #079E6E; }
+        div#at-plus-container div#button div#control-ring-container ul li.button span.unread {
+          width: 19px;
+          height: 17px;
+          position: relative;
+          top: -34px;
+          left: 20px;
+          font-size: 0.8rem;
+          opacity: 0;
+          display: block;
+          font-size: 0.8rem;
+          color: #DCDCDC;
+          padding-top: 2px;
+          vertical-align: bottom;
+          border-radius: 50%;
+          background-color: #FF3A3A; }
+        div#at-plus-container div#button div#control-ring-container ul li.button:nth-child(1) {
+          margin-top: 54px; }
+        div#at-plus-container div#button div#control-ring-container ul li.button:hover, div#at-plus-container div#button div#control-ring-container ul li.button.on {
+          background-color: #303f9f; }
+        div#at-plus-container div#button div#control-ring-container ul li.button.on:nth-child(1) {
+          background-image: url("../../assets/images/mask.png"); }
+  div#at-plus-container div#button #info-bar {
+    position: absolute;
+    top: 32px;
+    left: 32px;
+    width: 0;
+    height: 0;
+    transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    transition-timing-function: cubic-bezier(0, 0.2, 0.55, 1);
+    -moz-transition-timing-function: cubic-bezier(0, 0.2, 0.55, 1);
+    -webkit-transition-timing-function: cubic-bezier(0, 0.2, 0.55, 1);
+    -o-transition-timing-function: cubic-bezier(0, 0.2, 0.55, 1);
+    color: #FFF;
+    background-color: rgba(68, 68, 68, 0.68);
+    font-size: 100%;
+    text-align: center;
+    overflow: hidden;
+    border-radius: 50%; }
+    div#at-plus-container div#button #info-bar ul {
+      margin: 10% 0;
+      padding: 0; }
+    div#at-plus-container div#button #info-bar li {
+      list-style: none; }
+      div#at-plus-container div#button #info-bar li img {
+        margin-right: 8px;
+        vertical-align: middle; }
+    div#at-plus-container div#button #info-bar li.mine {
+      color: #079E6E;
+      display: inline; }
+    div#at-plus-container div#button #info-bar li.page.comment {
+      color: #079E6E;
+      font-size: 250%;
+      margin-top: 35%;
+      margin-bottom: 6%; }
+      div#at-plus-container div#button #info-bar li.page.comment img {
+        width: 20%;
+        height: 20%;
+        margin-right: 8%; }
+    div#at-plus-container div#button #info-bar li.mine.like {
+      margin-left: 5%; }
+
+/*# sourceMappingURL=menu.css.map */
