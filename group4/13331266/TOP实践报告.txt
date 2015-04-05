@@ -1,0 +1,73 @@
+TOP实践报告
+
+13331266
+
+首先是尝试TOP重写作业时的基本思路：
+
+S1
+  windows.onload时必须完成的事：
+      令按钮可点击（make-all-button-can-be-clicked!）；
+      鼠标移开后按钮可还原（reborn-all-buttons）；
+
+  实现make-all-button-can-be-clicked：
+      为每一个按钮绑定事件get-number;
+
+      实现get-number:
+          改变按钮样式；
+          向server发出请求;
+          等待server回应（wait-number);
+          获得随机数；
+          
+
+          实现wait-number:
+              定义make-button-disable和make-button-enable来方便调用；
+              判断是否可激活大气泡，如可以，调用get-result;
+
+  实现reborn-all-buttons：
+      还原样式；
+      make-button-enable。
+
+
+S2(重复部分不赘述)
+  windows.onload时必须完成的事：
+      为Icon绑定click事件，调用robot-click-A-to-E
+
+  实现robot-click-A-to-E：
+      定义回调函数S2-callback用于实现异步点击；
+      在wait-number等待执行完毕后调用callback。
+
+
+S3
+  实现robot-click-A-to-E：
+      无需异步，用循环模拟同时点击；
+      修改get-Number使每次发送请求的参数不同。
+
+
+S4
+  实现robot-click-A-to-E：
+      调用callback之前要先执行get-order，随机生成一个序列；
+
+  实现get-order:
+      生成序列后传给大气泡并返回；
+
+
+S5
+  实现robot-click-A-to-E：
+      通过get-order获得随机序列；
+      执行s5-callback实现异步；
+
+  实现S5-callback:
+      重写该函数，将顺序、计数、当前和等作为参数传递；
+      每次点击调用相应的handler；
+
+  实现A-E handler:
+      获得传入的参数，处理try-throw，处理时调用bubble-handler显示信息，完毕后视情况调用callback执行下一次点击或调用bubble-handler显示最终结果；
+
+  实现bubble-handler:
+      根据传入参数的不同处理{message, currentSum}。
+
+
+感想：
+      初看老师演示Live Coding时最大的感受就是“所思即所码”，敲打的代码跟思维是同步的，不需要像以前一样思维受代码所限，在不同函数之间跳脱。
+      在实践中更感受到，TOP编程就像树状图的展开，从顶端根节点出发，将任务分割成小任务和更小的任务，渐渐化整为零。一开始无需考虑底层的具体实现，令整个编写过程更有条理和指向性。
+     不过因个人能力所限，自己写的LiveScript代码看上去还是有些繁琐，但是TOP编程的优势已初见端倪，期待在接下来的实践中有所精进。
