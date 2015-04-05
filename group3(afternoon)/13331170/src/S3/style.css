@@ -1,0 +1,206 @@
+/*Origin css code ref from zhao god*/
+
+* {
+	margin: 0;
+	padding: 0;
+}
+body {
+	font-family: "Microsoft YaHei";
+	text-align:  center;
+	font-weight: bold;
+}
+li {
+	list-style-type: none;
+}
+#info-bar {
+	opacity: 0;
+	width: 0;
+	height: 0;
+	left: 50%;
+	overflow: hidden;
+	position: absolute;
+	bottom: 200px;
+	margin-left: 10px;
+	border-radius:50%;
+	background-color: #7e7e7e;
+	font-size: 30px;
+	color: #3DD89F;
+	-webkit-transition: all 0.4s ease-in-out;
+    -moz-transition: all 0.4s ease-in-out;
+    -ms-transition: all 0.4s ease-in-out;
+    -o-transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out;
+}
+#button:hover #info-bar {
+	width: 130px;
+	opacity: 1;
+	height: 130px;
+	bottom: 270px;
+	margin-left: -50px;
+}
+.user {
+	padding-top: 5%;
+}
+.user > img {
+	position: relative;
+	top: 9px;
+}
+.comment {
+	font-size: 2em;
+	padding-top: 5%;
+}
+.page {
+	color: white;
+}
+.page > span {
+	margin-left: 5%;
+}
+.mine {
+	width: 50%;
+	font-size: 1.2em;
+	color: #079E6E;
+	float: left;
+}
+.posted > img{
+	left: 5px;
+}
+.posted > span {
+	position: relative;
+	left: 9px;
+}
+.mine > img {
+	position: relative;
+	top: 6px;
+}
+.like > img {
+	right: 10px;
+}
+.like > span {
+	position: relative;
+	top:-2px;
+	right: 4px;
+}
+#control-ring-container li {
+	border-radius: 50%;
+	position: absolute;
+	height: 35px;
+	width: 35px;
+	background-color: #969696;
+	opacity: 1;
+	left: 50%;
+	bottom: 200px;
+	opacity: 0;
+	-webkit-transition: all 0.4s ease-in-out;
+    -moz-transition: all 0.4s ease-in-out;
+    -ms-transition: all 0.4s ease-in-out;
+    -o-transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out;
+}
+
+#button:hover #control-ring-container li {
+	opacity: 1;
+}
+.mask {
+	/*background: url("assets/images/nomask.png") no-repeat center;*/
+}
+#button:hover .mask {
+	margin-left: -60px;
+	bottom: 240px;
+}
+.history {
+	/*background: url("assets/images/history.png") no-repeat center;*/
+}
+#button:hover .history {
+	margin-left: -75px;
+	bottom: 190px;
+}
+.message {
+	/*background: url("assets/images/message.png") no-repeat center;*/
+}
+#button:hover .message {
+	margin-left: -55px;
+	bottom: 150px;
+}
+.setting {
+	/*background: url("assets/images/setting.png") no-repeat center;*/
+}
+#button:hover .setting {
+	margin-left: -15px;
+	bottom: 125px;
+}
+.sign {
+	/*background: url("assets/images/signin.png") no-repeat center;*/
+}
+#button:hover .sign {
+	margin-left: 30px;
+	bottom: 140px;
+}
+
+#control-ring li {
+	color: #268D8C;
+	font-size: 25px;
+	font-weight: bold;
+	font-family: Arial;
+}
+
+#button:hover .button {
+	background-color: blue;
+}
+
+.unread {
+	font-size: 10px;
+	position: relative;
+	display: block;
+	color: white;
+	width: 18px;
+	height: 18px;
+	border-radius: 50%;
+	left: 23px;
+	top: -35px;
+	background-color: red;
+}
+.apb {
+	position: absolute;
+	width: 35px;
+	height: 35px;
+	background: url("assets/images/atplus_white.png") no-repeat center;
+	background-color: #999fd3;
+	left: 50%;
+	bottom: 200px;
+	border-radius: 50%;
+	-webkit-transition: all 0.4s ease-in-out;
+    -moz-transition: all 0.4s ease-in-out;
+    -ms-transition: all 0.4s ease-in-out;
+    -o-transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out;
+}
+#button:hover .apb {
+	width: 80px;
+	height: 80px;
+	bottom: 180px;
+	background: url("assets/images/atplus_green.png") no-repeat center;
+	background-color: #303f9f;
+	margin-left: -20px;
+}
+
+#button {
+	width: 200px;
+	height: 300px;
+	margin-left: 43%;
+	margin-top: 17%;
+}
+
+#button:hover {
+	width: 200px;
+	height: 300px;
+	margin-left: 43%;
+	margin-top: 17%;
+}
+
+.active {
+	background-color: blue;
+}
+
+.unactive {
+	background-color: gray;
+}
