@@ -1,2 +1,2 @@
 window.onload = !->
-    initCalculator();
+    initCalculator!
