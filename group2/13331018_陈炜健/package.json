@@ -1,0 +1,17 @@
+{
+  "name": "ring-menu",
+  "version": "0.1.0",
+  "author": "陈炜健",
+  "dependencies": {
+    "express": "^4.10.2"
+  },
+  "devDependencies": {
+    "grunt": "0.x.x",
+    "grunt-contrib-jshint": "*",
+    "grunt-contrib-concat": "~0.1.1",
+    "grunt-contrib-watch": "~0.1.4",
+    "load-grunt-tasks": "^0.6.0",
+    "grunt-express-server": "^0.4.19",
+    "grunt-livescript": "0.5.4"
+  }
+}
