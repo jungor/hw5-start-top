@@ -1,0 +1,172 @@
+#at-plus-container {
+    position: fixed;
+    width: 30px;
+    left: 50%;
+    top: 70%;
+    margin-left: -15px;
+}
+
+#button {
+    width: 300px;
+    height: 300px;
+}
+
+#info-bar {
+    width: 121px;
+    height: 80px;
+    border-radius: 90px;
+    color: rgb(58, 230, 170);
+    text-align: center;
+    padding-top: 40px;
+    font: normal 500 28px/30px arial,sans-serif;
+    background: rgba(118, 118, 118, 0.8) no-repeat fixed center;
+
+    position: fixed;
+    top: 56%;
+    left: 46%;
+    visibility: hidden;
+
+    transition: all 0.8s;
+}
+
+ul {
+    padding-left: 0;
+}
+
+li {
+    width: 35px;
+    height: 35px;
+    border-radius: 25px;
+    -moz-border-radius: 25px;
+    list-style-type: none;
+    background: rgba(118, 118, 118, 0.8) no-repeat fixed center;
+
+    position: fixed;
+    top: 73%;
+    left: 49%;
+    visibility: hidden;
+
+    transition: all 0.8s;
+}
+
+.inner {
+    color: rgb(58, 230, 170);
+    margin: 0px 10px 0 10px;
+    padding-top: 2px;
+    font: normal normal 20px/30px arial,sans-serif;
+}
+
+.unread {
+    display: inline;
+    width: 20px;
+    height: 20px;
+    
+    border-radius: 25px;
+
+    float: right;
+    margin-top: -35px;
+    margin-right: -7px;
+    margin-bottom: 10px;
+
+    color: white;
+    text-align: center;
+
+    background-color: rgb(241, 68, 72);
+    font: normal normal 10px/30px arial,sans-serif;
+
+    visibility: hidden;
+}
+
+.num {
+    margin-top: -5px;
+}
+
+.apb {
+    width: 30px;
+    height: 30px;
+
+    position: fixed;
+
+    border-radius: 90px;
+    background: rgba(150, 155, 210, 1) url(../assets/images/atplus_white.png) no-repeat scroll center;
+
+    transition: all 0.8s;
+}
+
+#at-plus-container:hover .apb {
+    width: 55px;
+    height: 55px;
+
+    left: 48%;
+
+    background-color: rgba(48, 63, 159, 1);
+    background-image: url(../assets/images/atplus_green.png);
+    background-size: 40px 30px;
+}
+
+#at-plus-container:hover #info-bar {
+    top: 51%;
+
+    visibility: visible;
+}
+
+#at-plus-container:hover li.mask {
+    top: 67%;
+    left: 44.5%;
+
+    background-color: rgba(48, 63, 159, 1);
+
+    visibility: visible;
+}
+
+#at-plus-container:hover li.history {
+    top: 73.5%;
+    left: 43.5%;
+
+    background-color: rgba(48, 63, 159, 1);
+
+    visibility: visible;
+}
+
+#at-plus-container:hover li.message {
+    top: 80%;
+    left: 44.5%;
+
+    background-color: rgba(48, 63, 159, 1);
+
+    visibility: visible;
+}
+
+#at-plus-container:hover li.setting {
+    top: 84.5%;
+    left: 47%;
+
+    background-color: rgba(48, 63, 159, 1);
+
+    visibility: visible;
+}
+
+#at-plus-container:hover li.sign {
+    top: 84%;
+    left: 50.5%;
+
+    background-color: rgba(48, 63, 159, 1);
+
+    visibility: visible;
+}
+
+.disable {
+    background-color: rgba(118, 118, 118, 0.8)!important;
+}
+
+.enable {
+    background-color: rgba(48, 63, 159, 1)!important;
+}
+
+.waiting {
+    background-color: rgba(48, 63, 159, 1)!important;
+}
+
+.done {
+    background-color: rgba(118, 118, 118, 0.8)!important;
+}
