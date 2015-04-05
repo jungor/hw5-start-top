@@ -1,0 +1,5 @@
+This time, the homework is very hard
+First, it is't easy to implement
+Second, it just likes a kind of new language to learn, I could't deal it in half hour just like what Mr. Wang say
+
+However, the most deeply impression to me, It is the TOP thought, using the function just list class in C++ to implement what we want to do. For me , It is very like C++.
