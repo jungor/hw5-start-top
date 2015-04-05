@@ -1,0 +1,201 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+ul {
+    list-style-type: none;
+}
+
+.enable {
+    background-color: rgba(48, 63, 159, 1);
+    transition: 0.7s;
+}
+.disable {
+    background-color: #676767;
+    transition: 0.7s;
+}
+
+
+.button {
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 50%;
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    opacity: 0;
+    visibility: hidden;
+}
+
+#info-bar {
+    left: 0px;
+    bottom: -30px;
+    border-radius: 50%;
+    height: 30px;
+    width: 30px;
+    position: absolute;
+    visibility: hidden;
+    z-index: 1;
+    opacity: 0;
+    transition: 0.7s;
+}
+
+#at-plus-container:hover #info-bar {
+    height: 130px;
+    width: 130px;
+    left: -40px;
+    bottom: 18px;
+    opacity: 1;
+    transition: 0.7s;
+}
+
+#at-plus-container {
+    z-index: 3;
+    background-image: url("assets/images/atplus_white.png");
+    background-color: #9BA0D8;
+    background-size: 25px, 25px;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 50%;
+    position: fixed;
+    bottom: 150px;
+    left: 50%;
+    width: 30px;
+    height: 30px;
+    transition: 0.7s;
+}
+
+#bottom-positioner {
+    width: 0;
+    height: 0;
+    position: absolute;
+    transition: 0.7s;
+}
+
+#at-plus-container:hover {
+
+    background-image: url("assets/images/atplus_green.png");
+    background-color: rgba(48, 63, 159, 1);
+    background-size: 42px, 42px;
+    width: 50px;
+    height: 50px;
+    transition: 0.7s;
+}
+
+#at-plus-container:hover .apb {
+  width: 230px;
+  height: 230px;
+  position: absolute;
+  left: -73px;
+  top: -133px;
+  z-index: 0;
+
+}
+
+#at-plus-container:hover .button {
+    visibility: visible;
+    opacity: 1;
+    transition: 0.7s;
+}
+
+#at-plus-container:hover #info-bar {
+    visibility: visible;
+}
+
+.mask,.history,.message,.setting,.sign {
+    bottom: -30px;
+    right: -30px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 22px;
+    color: #278F88;
+    z-index: 1;
+}
+
+#at-plus-container:hover  .mask {
+  bottom: -9px;
+  right: 23px;
+}
+
+#at-plus-container:hover  .history {
+    bottom: -47px;
+  right: 38px;
+}
+
+#at-plus-container:hover  .message {
+bottom: -83px;
+    right: 24px;
+}
+
+#at-plus-container:hover  .setting {
+  bottom: -105px;
+  right: -8px;
+}
+
+#at-plus-container:hover  .sign {
+  bottom: -99px;
+  right: -50px;
+}
+
+.unread {
+    color: white;
+    background-color: red;
+    border-radius: 50%;
+    position: absolute;
+    text-align: center;
+    width: 18px;
+    height: 18px;
+    left: 20px;
+    bottom: 20px;
+    font-size: 15px;
+}
+
+
+
+.page {
+    position: relative;
+    font-weight: bold;
+
+    color: white;
+    left: 42px;
+}
+
+.page span {
+    padding-left: 0px;
+}
+
+.mine {
+    height: 23px;
+    left: 23px;
+    margin-top: 20px;
+    position: relative;
+    display: inline-block;
+    color: #38CB95;
+    top: 15px;
+    line-height: 23px;
+}
+
+.user {
+    line-height: 25px;
+    top: 13px;
+    font-size: 22px;
+}
+
+.comment {
+    line-height: 23px;
+    top: 53px;
+    font-size: 23px;
+    color: #278F88;
+}
+
+.mine img {
+    position: relative;
+    top: 3px;
+}
+
+.mine span{
+    padding-left: 3px;
+    font-size: 23px;
+    font-weight: bold;
+}
