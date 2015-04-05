@@ -50,9 +50,9 @@ module.exports = (grunt) ->
 
     clean: [
       '<%= meta.basePath %>.sass-cache'
-      '<%= meta.destPath.html %>*.html'
-      '<%= meta.destPath.css %>*.css'
-      '<%= meta.destPath.js %>*.js'
+      '<%= meta.destPath.html %>index.html'
+      '<%= meta.destPath.css %>index.css'
+      '<%= meta.destPath.js %>index.js'
     ]
 
     watch:

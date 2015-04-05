@@ -38,7 +38,6 @@ enable-other-btn = -> for btn in btns
       window.NUMBERS ++= [Number(req.response)]
       num.innerText = req.response
       enable-other-btn()
-      console.log(AUTO)
       if AUTO
         for btn_ in btns
           if btn_ not in CLICKED

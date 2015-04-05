@@ -6,7 +6,7 @@ disable-btn = (btn) -> btn.setAttribute('onclick', ''); btn.style.backgroundColo
 check-ready = ->
   if NUMBERS.length != 5 => return false
   $('#info-bar')[0].setAttribute('onclick', 'showSum()')
-  if AUTO => show-sum() ; $('#base')[0].setAttribute('onclick', '')
+  if AUTO => show-sum() ;
 
 disable-other-btn = -> [disable-btn(btn) for btn in btns when btn not in CLICKED]
 enable-other-btn = -> for btn in btns
@@ -23,6 +23,7 @@ enable-other-btn = -> for btn in btns
 
 
 @get-random-num = (btn, current = 0, order = []) ->
+  if not AUTO => $('#base')[0].setAttribute('onclick', '')
   current++
   @CLICKED ++= [btn]
   num = btn.getElementsByClassName('num')[0]
@@ -66,6 +67,7 @@ enable-other-btn = -> for btn in btns
 @random-click = ->
   @AUTO = true; @CURRENT = 0; @ORDER = [til 5].sort(shuffle)
   show-order(ORDER)
+  $('#base')[0].setAttribute('onclick', '')
   get-random-num(btns[ORDER[CURRENT]], CURRENT, ORDER)
 
 shuffle = -> if Math.random() > 0.5 => return -1 else return 1
