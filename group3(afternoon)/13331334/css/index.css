@@ -1,0 +1,155 @@
+body {
+	font-family: Arial, Helvetica, sans-serif;
+	color: rgb(56, 220, 159);
+}
+
+li {
+	list-style-type: none;
+}
+
+div#info-bar.disabled, ul#control-ring li.disabled {
+	background-color: rgba(126, 126, 126, 1);
+}
+
+div#bottom-positioner {
+	width: 0;
+	left: 50%;
+	position: absolute;
+	bottom: 100px;
+	font-weight: bold;
+}
+
+div.icon {
+	background-image: url("/atplus_white.png");
+	background-position: center center;
+	background-repeat: no-repeat;
+	height: 28px;
+	width: 28px;
+	background-size: 80%;
+	transition:         height 0.5s ease-in-out 1.5s, width 0.5s ease-in-out 1.5s, background-image 0.1s ease-in-out 1.9s;
+	-moz-transition:    height 0.5s ease-in-out 1.5s, width 0.5s ease-in-out 1.5s, background-image 0.1s ease-in-out 1.9s;
+	-webkit-transition: height 0.5s ease-in-out 1.5s, width 0.5s ease-in-out 1.5s, background-image 0.1s ease-in-out 1.9s;
+}
+
+div#button:hover div.icon {
+	background-image: url("/atplus_green.png");
+	transition:         all 0.5s ease-in-out 0s;
+	-moz-transition:    all 0.5s ease-in-out 0s;
+	-webkit-transition: all 0.5s ease-in-out 0s;
+}
+
+div.apb {
+	height: 28px;
+	width: 28px;
+	border-radius: 50%;
+	background-color: rgba(154, 159, 214, 1);
+	transition:         all 0.5s ease-in-out 1.5s;
+	-moz-transition:    all 0.5s ease-in-out 1.5s;
+	-webkit-transition: all 0.5s ease-in-out 1.5s;
+}
+
+div#button:hover div.apb {
+	background-color: rgba(48, 63, 159, 1);
+	transform:         scale(2.0, 2.0);
+	-moz-transform:    scale(2.0, 2.0);
+	-webkit-transform: scale(2.0, 2.0);
+	transition:         all 0.5s ease-in-out 0s;
+	-moz-transition:    all 0.5s ease-in-out 0s;
+	-webkit-transition: all 0.5s ease-in-out 0s;
+}
+
+div#button:hover div#info-bar {
+	transform: scale(1, 1) translate(20px, -80px);
+}
+
+div#info-bar, ul#control-ring li {
+	opacity: 0;
+	position: absolute;
+	transition:         all 0.5s ease-in-out 1s;
+	-moz-transition:    all 0.5s ease-in-out 1s;
+	-webkit-transition: all 0.5s ease-in-out 1s;
+}
+
+div#button:hover div#info-bar, div#button:hover ul#control-ring li {
+	opacity: 1;
+	transition:         all 0.5s ease-in-out 0s;
+	-moz-transition:    all 0.5s ease-in-out 0s;
+	-webkit-transition: all 0.5s ease-in-out 0s;
+}
+
+div#info-bar {
+	background-color: rgba(48, 63, 159, 1);
+	width: 120px;
+	height: 120px;
+	border-radius: 50%;
+	transform: scale(0.2, 0.2);
+	left: -60px;
+	top: -46px;
+}
+
+div.info {
+	margin-top: 40px;
+}
+
+div.info ul {
+	margin: 0;
+	padding: 0;
+}
+
+li#total {
+	text-align: center;
+	font-size: 200%;
+}
+
+ul#control-ring li {
+	background-color: rgba(48, 63, 159, 1);
+	width: 30px;
+	height: 30px;
+	border-radius: 50%;
+	transform: scale(0.7, 0.7);
+	left: -4px;
+	top: 12px;
+	text-align: center;
+}
+
+span.number {
+	display: inline-block;
+	vertical-align: middle;
+	font-size: 150%;
+	font-weight: normal;
+}
+
+div#button:hover ul#control-ring > li.mask {
+	transform: translate(-53px, -34px);
+}
+
+div#button:hover ul#control-ring > li.history {
+	transform: translate(-64px, 0px);
+}
+
+div#button:hover ul#control-ring > li.message {
+	transform: translate(-53px, 34px);
+}
+
+div#button:hover ul#control-ring > li.setting {
+	transform: translate(-26px, 57px);
+}
+
+div#button:hover ul#control-ring > li.sign {
+	transform: translate(17px, 61px);
+}
+
+span.unread {
+	display: block;
+	width: 15px;
+	height: 15px;
+	border-radius: 50%;
+	text-align: center;
+	font-size: 12px;
+	background-color: #FF382B;
+	color: white;
+	border-radius: 50%;
+	position: relative;
+	left: 20px;
+	top: -32px;
+}
