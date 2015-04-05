@@ -1,8 +1,0 @@
-*.sw*
-*~
-node_modules/
-.temp/
-vendor/
-*.log
-.DS_Store
-bin/
