@@ -7,22 +7,22 @@ module.exports = function (grunt) {
 
   grunt.initConfig({
 
-  	copy: {
-  		assests: {
-  			src: ["**/assets/**", "**/*.html", "**/*.css", "server.js", "jquery.min.js"],
-  			dest: "bin/",
-  			cwd: "src/",
-  			expand: true
-  		}
+    copy: {
+      assests: {
+        src: ["**/assets/**", "**/*.html", "**/*.css", "server.js", "jquery.min.js"],
+        dest: "bin/",
+        cwd: "src/",
+        expand: true
+      }
     },
 
-  	clean: {
-  		files: {
-  			src: ["bin/*"]
-  		}
-  	},
+    clean: {
+      files: {
+        src: ["bin/*"]
+      }
+    },
 
-  	livescript: {
+    livescript: {
       options: {
         bare: false
       },
@@ -35,22 +35,22 @@ module.exports = function (grunt) {
       },
     },
 
-  	express: {
-  		dev: {
-  			options: {
-  				server: path.resolve('bin/server.js'),
+    express: {
+      dev: {
+        options: {
+          server: path.resolve('bin/server.js'),
           bases: [path.resolve('bin')],
           livereload: 3001,
           port: 3000
-  			}
-  		}
-  	},
+        }
+      }
+    },
 
-  	delta: {
-  		options: {
-  			livereload: true
-  		},
-  		livescriptclient: {
+    delta: {
+      options: {
+        livereload: true
+      },
+      livescriptclient: {
         files: ["src/**/*.ls"],
         tasks: ["newer:livescript:client"]
       },
@@ -58,14 +58,14 @@ module.exports = function (grunt) {
         files: ["src/**/*", "!**/*.ls"],
         tasks: ["newer:copy:assests"]
       },
-  		express: {
-  			files: ["bin/**/*.*", "!bin/server.js", "!bin/data.js"],
+      express: {
+        files: ["bin/**/*.*", "!bin/server.js", "!bin/data.js"],
         tasks: [],
         options: {
           livereload: 3001
         }
-  		}
-  	}
+      }
+    }
   });
 
   grunt.renameTask("watch", "delta");
