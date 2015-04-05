@@ -1,0 +1,209 @@
+body {
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+#at-plus-container {
+	position: fixed;
+	height: 300px;
+	width: 300px;
+	left: 40%;
+	top: 40%;
+}
+
+#button {
+	height: 300px;
+	width: 300px;
+}
+
+li {
+	list-style: none;
+}
+
+.apb {
+	position: absolute;
+	left: 150px;
+	top: 170px;
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	background-color: #7D9EC0;
+	transform: scale(0.8, 0.8);
+	transition: 0.5s;
+}
+
+#white {
+	position: absolute;
+	top: 10px;
+	left: 6px;
+	opacity: 1;
+	transition: 0.3s;
+}
+
+#green {
+	position: absolute;
+	top: -5px;
+	left: -13px;
+	opacity: 0;
+	transform: scale(0.5, 0.5);
+	transition: 0.5s;
+}
+
+#info-bar {
+	width: 130px;
+	height: 130px;
+	border-radius: 50%;
+	position: absolute;
+	top:  118px;
+	left: 102px;
+	transform: scale(0.3, 0.3);
+	background-color: gray;
+	opacity: 0;
+	transition: 0.5s;
+}
+
+#info-bar li {
+	position: absolute;
+}
+
+#info-bar img {
+	float: left;
+	margin: -2px 2px 0 0;
+}
+
+#info-bar span {
+	font-weight: bold;
+	color: white;
+	margin: 4px;
+}
+
+#info-bar .page_user {
+	top: 12px;
+	left: 47px;
+}
+
+#info-bar .page_comment {
+	top: 45px;
+	left: 48px;
+	font-size: 22px;
+	transform: scale(1.5, 1.5);
+}
+
+#info-bar .page_comment img {
+	margin: 1px 2px 0 0;
+}
+
+#control-ring-container li {
+	width: 42px;
+	height: 42px;
+	left: 149px;
+	top: 167px;
+	opacity: 0;
+	background-color: rgba(48,63,159,1);
+	border-radius: 50%;
+	position: absolute;
+	transform: scale(0.8, 0.8);
+	transition: 0.5s;
+}
+
+#control-ring-container img {
+	padding: 8px 9px;
+}
+
+#button:hover #info-bar {
+	transform: scale(1, 1);
+	opacity: 1;
+	top: 5px;
+	left: 106px;
+}
+
+#button:hover .mask_button {
+	left: 94px;
+	top: 135px;
+	opacity: 1;
+}
+
+#button:hover .history_button {
+	left: 78px;
+	top: 177px;
+	opacity: 1;
+}
+
+
+#button:hover .message_button {
+	left: 92px;
+	top: 218px;
+	opacity: 1;
+}
+
+
+#button:hover .setting_button {
+	left: 138px;
+	top: 234px;
+	opacity: 1;
+}
+
+
+#button:hover .sign_button {
+	left: 186px;
+	top: 226px;
+	opacity: 1;
+}
+
+
+.number {
+	width: 24px;
+	height: 24px;
+	padding: 2px 0 0 0;
+	top: -5px;
+	right: -10px;
+	text-align: center;
+	color: white;
+	position: absolute;
+	background-color: #FF3030;
+	border-radius: 50%;
+	-webkit-transition: 0.5s;
+	transition: 0.5s;
+}
+
+#button:hover .apb {
+	background-color: rgba(48,63,159,.8);
+	transform: scale(1.6, 1.6);
+}
+
+#button:hover #green {
+	visibility: visible;
+	opacity: 1;
+}
+
+#button:hover #white {
+	visibility: hidden;
+	opacity: 0;
+}
+
+
+
+.letter {
+	font-size: 25px;
+	position: relative;
+	left: 12px;
+	top: 6px;
+
+}
+
+#big {
+	position: relative;
+	top: 40px;
+	left: 50px;
+}
+
+.disable {
+	background-color : gray;
+}
+
+.disappear {
+	display: none;
+}
+
+.appear {
+	display: block;
+}

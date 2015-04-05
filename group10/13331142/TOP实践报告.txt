@@ -1,0 +1,3 @@
+    没什么好说的，还在研究grunt的配置，还不会自己配置，所以除了index.ls，其他都是老师的代码，
+index.ls亦是参考了老师的代码，所以这些只是用于对付deadline。基本的功能还是实现了的。
+    在每个S*文件夹下npm install, 然后grunt watch，用浏览器打开http://localhost:8000/
