@@ -1,0 +1,30 @@
+{
+  "name": "S1",
+  "version": "0.0.0",
+  "description": "重写hw4第一题",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Ethan-zhengyw/hw5-start-top.git"
+  },
+  "keywords": [
+    "TOP"
+  ],
+  "author": "Ethan-zhengyw",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Ethan-zhengyw/hw5-start-top/issues"
+  },
+  "devDependencies": {
+    "grunt": "*",
+    "grunt-contrib-sass": "*",
+    "grunt-contrib-jade": "*",
+    "grunt-contrib-copy": "*",
+    "grunt-contrib-clean": "*",
+    "grunt-contrib-watch": "*",
+    "grunt-livescript": "*"
+  }
+}

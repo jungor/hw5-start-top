@@ -1,0 +1,21 @@
+doctype html
+html
+  head
+    title Calculator
+    meta(charset='utf-8')
+    link(rel='icon' sizez='196*196' href='assets/images/favicon.png')
+    link(rel='stylesheet' href='../index.css' type='text/css')
+    script(src='Calculator.js')
+    script(src='index.js')
+  body
+    div#calculator
+      div#calculator-region
+      button#displayer
+        div#text-above
+        div#text
+      div#buttons
+        - var buttonList = ['A', 'B', 'C', 'D', 'E']
+        - for id in buttonList
+          button.button(id=id) #{id}
+            div.num
+      button#at-plus-button
