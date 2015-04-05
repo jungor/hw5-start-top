@@ -1,0 +1,36 @@
+doctype html
+html
+  head
+    title 环形按钮
+    meta(charset='utf-8')
+    link(rel='stylesheet', href='index.css')
+    link(rel="icon" sizes="196x196" href="assets/images/favicon.png")
+    script(src='jquery.min.js')
+    script(src='index.js')
+
+  body
+    #at-plus
+      #button
+        #info-bar
+          .info(style='display:block')
+            ul
+              li.page.sequence
+              li.page.amount
+        #control-ring-container
+          ul#control-ring
+            li.button
+              span.title A
+              span.unread ...
+            li.button
+              span.title B
+              span.unread ...
+            li.button
+              span.title C
+              span.unread ...
+            li.button
+              span.title D
+              span.unread ...
+            li.button
+              span.title E
+              span.unread ...
+        .apb
