@@ -1,0 +1,32 @@
+doctype HTML
+html
+	head
+		title 环形按钮
+		meta(charset="utf-8")
+		link(rel="icon" sizes="196x196" href="../assets/images/favicon.png")
+		link(rel="stylesheet" href="../main.css")
+	body
+		#at-plus-container
+			#blank
+			#bottom-positioner
+				#button
+					#info-bar
+						.info
+							p#cal-result
+							p#msg
+					#control-ring-container
+						ul#control-ring
+							li#aButton(title="蒙版")
+								span A
+							li#bButton(title="历史记录")
+								span B
+							li#cButton(title="消息")
+								span C
+							li#dButton(title="设置")
+								span D
+							li#eButton(title="登录/注册")
+								span E
+					.apb
+						.icon
+	script(type="text/javascript" src="../jquery-2.1.3.js")
+	script(src="ajax.js")
