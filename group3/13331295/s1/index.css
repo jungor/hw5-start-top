@@ -1,0 +1,193 @@
+body {
+    width: 800px;
+    margin: 0 auto;
+    font-family: Arial, Helvetica, sans-serif;
+}
+#at-plus-container {
+    width: 300px;
+    position: relative;
+    top: 380px;
+    left: 31%;
+}
+#bottom-positioner {
+    width: 300px;
+    height: 150px;
+}
+#button {
+    margin-left: 40%;
+    -webkit-transition: all .5s;
+    -moz-transition: all .5s;
+    transition: all .5s;
+}
+
+.apb {
+    background-color: #585858;
+    width: 30px;
+    height: 30px;
+    border-radius: 15px;
+    background-image: url("assets/images/atplus_white.png");
+    background-repeat: no-repeat;
+    background-position: 3px 7px;
+    background-size: 80%;
+    opacity: .4;
+
+    position: absolute;
+    top: 45px;
+    left: 48%;
+
+    -webkit-transition: all .5s .4s;
+    -moz-transition: all .5s .4s;
+    transition: all .5s .4s;
+}
+.mask, .history, .message, .setting, .sign {
+    width: 14px;
+    height: 14px;
+    padding: 10px;
+    background-color: #003399;
+    color: #009933;
+    border-radius: 50%;
+    opacity: 0;
+    
+    position: absolute;
+    top: 45px;
+    left: 48%;
+
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    transition: all 0.5s;
+}
+#button:hover .ran_num {
+    width: 16px;
+    height: 16px;
+    font-size: 4px;
+    font-weight: bold;
+    padding: 1px 0 0 0;
+    top: -2px;
+    right: 0px;
+    text-align: center;
+    color: white;
+    position: absolute;
+    background-color: rgb(255,30,0);
+    border-radius: 50%;
+    -webkit-transition: 0.5s;
+    -moz-transition: 0.5s;
+    transition: 0.5s;
+}
+#control-ring img {
+    display: block;
+    width: 50%;
+    padding: 7px 0 0 8px;
+}
+#info-bar {
+    color: #FFF;
+    text-align: center;
+    font-size: 25px;
+    z-index: 999;
+    width: 30px;
+    height: 30px;
+    border-radius: 55px;
+    opacity: 0;
+
+    position: absolute;
+    top: 45px;
+    left: 48%;
+    overflow: hidden;
+
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    transition: all 0.5s;
+}
+
+.enable_bubble {
+    background-color: blue;
+}
+
+.sum {
+    top: 40px;
+    margin-left: 5px;
+    vertical-align: 8px;
+    position: relative;
+    font-size: 20px;
+    font-weight: 900;
+    color: #fff;
+}
+
+#button:hover {
+    width: 300px;
+    height: 150px;
+    margin: 0 auto;
+}
+
+#button:hover .apb {
+    background-color: #003399;
+    width: 50px;
+    height: 50px;
+    border-radius: 25px;
+    background-image: url("assets/images/atplus_green.png");
+    background-repeat: no-repeat;
+    background-position: 8px 13px;
+    background-size: 70%;
+
+    -webkit-transition: all .5s;
+    -moz-transition: all .5s;
+    transition: all .5s;
+}
+#button:hover #info-bar {
+    width: 110px;
+    height: 110px;
+    border-radius: 55px;
+    opacity: 1;
+    position: absolute;
+    top: -75px;
+    left: 38%;
+
+    cursor: pointer;
+}
+#button:hover .mask {
+    opacity: 1;
+    cursor: pointer;
+
+    position: absolute;
+    top: 19px;
+    left: 32%;
+}
+#button:hover .history {
+    opacity: 1;
+    cursor: pointer;
+
+    position: absolute;
+    top: 56px;
+    left: 29%;
+}
+#button:hover .message {
+    opacity: 1;
+    cursor: pointer;
+
+    position: absolute;
+    top: 92px;
+    left: 33%;
+}
+#button:hover .setting {
+    opacity: 1;
+    cursor: pointer;
+
+    position: absolute;
+    top: 110px;
+    left: 45%;
+}
+#button:hover .sign {
+    opacity: 1;
+    cursor: pointer;
+
+    position: absolute;
+    top: 108px;
+    left: 58%;
+}
+
+.hide {
+    visibility: hidden;
+    opacity: 0;
+}
+.disabled {
+    background-color: gray;
+}
