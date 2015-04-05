@@ -1,0 +1,132 @@
+body {}
+div#bottom-positioner {position: relative;
+                       margin-left: auto;
+                      margin-right: auto;}
+div#button {position: fixed;
+            width: 170px;
+            height: 250px;
+
+            left:45%;
+            right:30%;
+            padding: 0; 
+            bottom: 20%;
+            vertical-align: middle;
+	              }
+
+div#info-bar {position: absolute;}
+div.apb {position: absolute;}
+div#control-ring-container {position: absolute;}
+         
+div#info {border-radius: 50%;
+          position: absolute;
+          background-color: gray;
+          width: 20px
+          height: 20px;
+          margin-left: 60px;
+          margin-top: 60px;
+          opacity: 0;
+          padding: 0;
+          transition:opacity 1s, width 0.5s, height 0.5s, margin-left 0.5s,margin-top 0.5s;
+          color: green;
+          font-size: 32pt;
+          text-align: center;
+          font-weight: bold;
+          font-family: 微软雅黑;
+          line-height: 2;
+          color: lightgreen;
+}
+
+
+div.icon {background-color: rgba(48, 63, 159, 1);	      
+          border-radius: 50%;
+          position: absolute;
+          background-image: url("assets/images/atplus_green.png");
+          background-position:center;
+          background-size: 90%;
+          background-repeat: no-repeat;         
+          width:30px;
+          height: 30px;
+          top:120px;
+          left: 70px;
+          opacity: 0.2;
+          transition:opacity 1s, width 1s, height 1s;
+           }
+
+div#button:hover div.icon{opacity:1.0;
+               width:60px;
+               height:60px;
+                }
+div#button:hover div#info{opacity:1.0;
+               width:130px;
+               height:130px;
+               margin-left: 50px; 
+               margin-top:-25px;
+                }
+div#button:hover li.mine{opacity:1.0;}
+div#button:hover li.page{opacity:1.0;}
+div#button:hover li.mask{opacity:1.0;
+               width:40px;
+               height:40px;
+               margin-left: -20px;
+               margin-top: 70px;
+               }
+div#button:hover li.history{opacity:1.0;
+               width:40px;
+               height:40px;
+               margin-left: -25px;
+               margin-top: 120px;
+               }  
+div#button:hover li.message{opacity:1.0;
+               width:40px;
+               height:40px;
+               margin-left: -5px;
+               margin-top: 170px;
+               overflow: visible;
+               }
+div#button:hover li.setting{opacity:1.0;
+               width:40px;
+               height:40px;
+               margin-left: 45px;
+               margin-top: 180px;
+               }
+div#button:hover li.sign{opacity:1.0;
+               width:40px;
+               height:40px;
+               margin-left: 95px;
+               margin-top: 150px;
+               }          
+li.button {list-style-type:none;
+                    width: 10px;
+                    height: 10px;
+                    background-color: blue;
+                    border-radius: 50%;
+                    opacity: 0;
+                    background-position:center;
+                    line-height: 40px;
+          background-size: 60%;
+          background-repeat: no-repeat;
+          transition:opacity 1s, width 1s, height 1s, margin-left 1s,margin-top 1s;
+          position: absolute;
+          margin-left: 40px;
+          margin-top: 115px;
+          text-align: center;
+          font-size: 24px;
+          color:lightgreen;
+          font-family: 微软雅黑;
+                     }
+div#button:hover li {overflow: visible;}
+li {overflow: hidden;}
+span.redcircle {background-color: red;
+              position: absolute;
+             border-radius: 50%;
+             display: block;
+             float:right;
+             text-align: center;
+             left:30px;
+             bottom: 25px;
+             font-size: 10pt;
+             font-weight: bolder;            
+             width: 15px;
+             height: 15px;
+             font-family: 微软雅黑;
+             line-height: 15px}
