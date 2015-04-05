@@ -1,14 +1,14 @@
 # hw5-start-top
 
-测试方法:
+测试方法(于根目录进行):
 
 1. 安装dependencies: npm install
 
 2. 安装gulp: npm install -g gulp
 
-3. 执行: gulp
+3. 编译jade & LiveScript: gulp compile
 
-4. 运行server: node /path/to/12330152/server.js
+4. 运行server: gulp start
 
 5. 访问localhost:3000/S1/index.html
 

@@ -2,7 +2,17 @@ require! {http, url, path, fs}
 
 port = 3000
 
-getMimeType = (pathname) ->
+http.createServer (req, res) !->
+    pathname = url.parse req.url .pathname
+    mimeType = getMimeType pathname
+    if !!mimeType
+        handlePage req, res, pathname
+    else
+        handleAjax req, res
+.listen port, !->
+    console.log  "server listen on #port"
+
+function getMimeType pathname
     validExtensions = 
         ".html" : "text/html",
         ".js": "application/javascript",
@@ -13,7 +23,7 @@ getMimeType = (pathname) ->
     ext = path.extname pathname
     validExtensions.[ext]
 
-handlePage = (req, res, pathname) ->
+function handlePage req, res, pathname
     filePath = __dirname + pathname
     mimeType = getMimeType pathname
     if fs.existsSync filePath
@@ -30,7 +40,7 @@ handlePage = (req, res, pathname) ->
         res.writeHead 500
         res.end!
 
-handleAjax = (req, res) ->
+function handleAjax req, res
     random_time = 1000 + getRandomNumber 2000
     random_num = 1 + getRandomNumber 9
     setTimeout ->
@@ -38,15 +48,5 @@ handleAjax = (req, res) ->
         res.end '' +  random_num
     , random_time
 
-getRandomNumber = (limit) ->
+function getRandomNumber limit
     return Math.round Math.random! * limit
-
-http.createServer (req, res) !->
-    pathname = url.parse req.url .pathname
-    mimeType = getMimeType pathname
-    if !!mimeType
-        handlePage req, res, pathname
-    else
-        handleAjax req, res
-.listen port, !->
-    console.log  "server listen on #port"

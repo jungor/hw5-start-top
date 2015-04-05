@@ -1,15 +1,6 @@
 # selector for id and classname
 var buttons, displayer
 
-$ = (idOrClass, element) ->
-    element or (element = document)
-    if idOrClass[0] == '#'
-        id = idOrClass.substr 1
-        element.getElementById id
-    else
-        classname = idOrClass.substr 1
-        element.getElementsByClassName classname
-
 HTMLElement.prototype.enable = !->
     this.removeAttribute 'disabled'
 
@@ -25,82 +16,6 @@ HTMLElement.prototype.hide = !->
 HTMLCollection.prototype.forEach = (cb) !->
     for i from 0 til this.length
         cb this[i]
-
-# get random num from the server
-getRandom = (cb) !->
-    req = new XMLHttpRequest!
-    # add random to disable caching
-    req.open 'get', "/&random=#{Math.random!}"
-    req.onload = !->
-        res = this.responseText
-        cb res
-    req.send!
-
-initDisplayer = !->
-    # count how many nums are returned
-    var count
-
-    displayer.numReturned = !->
-        count := count + 1
-        # enable the displayer when the 5 nums are returned
-        if count == 5
-            @enable!
-
-    # cal the sum from buttons
-    displayer.onclick = !->
-        @disable!
-        sum = 0
-        buttons.forEach (button) !->
-            sum += button.getNum!
-        text.innerHTML = sum
-
-    displayer.init = !->
-        count := 0
-        @disable!
-        text.innerHTML = ''
-
-    displayer.init!
-
-initButton = (button) !->
-    num =  $ '.num', button .[0]
-    # when init, set a random stamp
-    # when send req, keep the stamp
-    # when callback, compare the current stamp and the saved stamp
-    var stamp
-
-    button.onclick = (evt, cb) !->
-        num.show!
-        num.innerHTML = '...'
-        # disable this button
-        @.disable!
-        # tmp-disable the other enabled buttons
-        thisButton = @
-        enabledButtons = []
-        buttons.forEach (button) !->
-            if not button.hasAttribute 'disabled' and button !== thisButton
-                button.disable!
-                enabledButtons.push button
-        do !->
-            _stamp = stamp
-            getRandom (res) !->
-                return if _stamp != stamp
-                # enable the tmp-disabled buttons
-                enabledButtons.forEach (button) !->
-                    button.enable!
-                displayer.numReturned!
-                num.innerHTML = res
-                cb! if cb
-
-    button.getNum = ->
-        parseInt num.innerHTML
-
-    button.init = !->
-        button.enable!
-        num.hide!
-        num.innerHTML = ''
-        stamp := Math.random!
-
-    button.init!
 
 window.initCalculator = !->
     displayer := $ '#displayer'
@@ -143,3 +58,89 @@ window.initCalculator = !->
             button.init!
 
     init!
+
+# definitions
+
+function $ idOrClass, element
+    element or (element = document)
+    if idOrClass[0] == '#'
+        id = idOrClass.substr 1
+        element.getElementById id
+    else
+        classname = idOrClass.substr 1
+        element.getElementsByClassName classname
+
+# get random num from the server
+!function getRandom cb
+    req = new XMLHttpRequest!
+    # add random to disable caching
+    req.open 'get', "/&random=#{Math.random!}"
+    req.onload = !->
+        res = this.responseText
+        cb res
+    req.send!
+
+!function initDisplayer
+    # count how many nums are returned
+    var count
+
+    displayer.numReturned = !->
+        count := count + 1
+        # enable the displayer when the 5 nums are returned
+        if count == 5
+            @enable!
+
+    # cal the sum from buttons
+    displayer.onclick = !->
+        @disable!
+        sum = 0
+        buttons.forEach (button) !->
+            sum += button.getNum!
+        text.innerHTML = sum
+
+    displayer.init = !->
+        count := 0
+        @disable!
+        text.innerHTML = ''
+
+    displayer.init!
+
+!function initButton button
+    num =  $ '.num', button .[0]
+    # when init, set a random stamp
+    # when send req, keep the stamp
+    # when callback, compare the current stamp and the saved stamp
+    var stamp
+
+    button.onclick = (evt, cb) !->
+        num.show!
+        num.innerHTML = '...'
+        # disable this button
+        @.disable!
+        # tmp-disable the other enabled buttons
+        thisButton = @
+        enabledButtons = []
+        buttons.forEach (button) !->
+            if not button.hasAttribute 'disabled' and button !== thisButton
+                button.disable!
+                enabledButtons.push button
+        _stamp = stamp
+        getRandom (res) !->
+            return if _stamp != stamp
+            # enable the tmp-disabled buttons
+            enabledButtons.forEach (button) !->
+                button.enable!
+            displayer.numReturned!
+            num.innerHTML = res
+            cb! if cb
+
+    button.getNum = ->
+        parseInt num.innerHTML
+
+    button.init = !->
+        button.enable!
+        num.hide!
+        num.innerHTML = ''
+        stamp := Math.random!
+
+    button.init!

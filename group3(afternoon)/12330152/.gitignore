@@ -1,6 +1,1 @@
-*/*.js
-*/*.html
-
-server.js
-
 node_modules/

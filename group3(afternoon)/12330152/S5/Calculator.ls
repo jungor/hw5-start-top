@@ -1,6 +1,12 @@
 # selector for id and classname
 var buttons, displayer
 
+const amsg = '这是个天大的秘密', anmsg = '这不是个天大的秘密!'
+const bmsg = '我不知道', bnmsg = '我知道!'
+const cmsg = '你不知道', cnmsg = '你知道!'
+const dmsg = '他不知道', dnmsg = '他知道!'
+const emsg = '才怪', enmsg = '才怪才怪!'
+
 HTMLElement.prototype.enable = !->
     this.removeAttribute 'disabled'
 
@@ -27,8 +33,11 @@ window.initCalculator = !->
 
     # init buttons and displayer
     initDisplayer!
-    buttons.forEach (button) !->
-        initButton button
+    initButton buttons[0], amsg, anmsg
+    initButton buttons[1], bmsg, bnmsg
+    initButton buttons[2], cmsg, cnmsg
+    initButton buttons[3], dmsg, dnmsg
+    initButton buttons[4], emsg, enmsg
 
     # open the calculator when mouseover
     calculator.onmouseover = !->
@@ -67,19 +76,25 @@ window.initCalculator = !->
         order.forEach (index) !->
             button = buttons[index]
             text += button.id
-        displayer.setText text
+        displayer.showText text
 
     atPlusButton.onclick = !->
         @disable!
         index = 0
+        curSum = 0
         order = getRandomOrder!
         showOrder order
         clickNext = !->
             if index == 5
                 displayer.onclick!
             else
-                buttons[order[index]].onclick null, !->
-                    clickNext!
+                buttons[order[index]].onclick null, curSum, (nmsg, curSum) !->
+                    # failed
+                    if nmsg != ''
+                        displayer.showTextAbove nmsg
+                    # success
+                    else
+                        clickNext!
                 index++
         clickNext!
 
@@ -114,27 +129,34 @@ function $ idOrClass, element
 
 !function initDisplayer
     text = $ '#text'
+    textAbove = $ '#text-above'
 
     # count how many nums are returned
     var count
+    # keep cur sum
+    curSum = 0
 
-    displayer.numReturned = !->
+    displayer.numReturned = (num) !->
+        curSum += num
         count := count + 1
         # enable the displayer when the 5 nums are returned
         if count == 5
             @enable!
 
-    displayer.setText = (str) !->
+    displayer.getNum = ->
+        curSum
+
+    displayer.showText = (str) !->
         text.innerHTML = str
         text.show!
 
-    # cal the sum from buttons
+    displayer.showTextAbove = (str) !->
+        textAbove.innerHTML = str
+
+    # show the sum
     displayer.onclick = !->
         @disable!
-        sum = 0
-        buttons.forEach (button) !->
-            sum += button.getNum!
-        text.innerHTML = sum
+        text.innerHTML = curSum
         text.show!
 
     displayer.init = !->
@@ -142,17 +164,18 @@ function $ idOrClass, element
         count := 0
         @disable!
         text.innerHTML = ''
+        textAbove.innerHTML = ''
 
     displayer.init!
 
-!function initButton button
+!function initButton button, msg, nmsg
     num =  $ '.num', button .[0]
     # when init, set a random stamp
     # when send req, keep the stamp
     # when callback, compare the current stamp and the saved stamp
     var stamp
 
-    button.onclick = (evt, cb) !->
+    button.onclick = (evt, curSum, cb) !->
         num.show!
         num.innerHTML = '...'
         # disable this button
@@ -170,9 +193,16 @@ function $ idOrClass, element
             # enable the tmp-disabled buttons
             enabledButtons.forEach (button) !->
                 button.enable!
-            displayer.numReturned!
+            displayer.numReturned parseInt res
             num.innerHTML = res
-            cb! if cb
+            sum = parseInt(res) + curSum
+            # random failing
+            failed = Math.random! > 0.3
+            if failed
+                cb nmsg, curSum
+            else
+                displayer.showTextAbove msg
+                cb '', curSum
 
     button.getNum = ->
         parseInt num.innerHTML
