@@ -1,0 +1,2 @@
+各文件夹中已经编译好coffeescript
+检查方式同lab4
