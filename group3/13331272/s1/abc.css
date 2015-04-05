@@ -1,0 +1,200 @@
+body {
+	font-family: "Helvetica Neue" , Arial;
+}
+li {
+	list-style: none;
+}
+
+#at-plus-container {
+	position: absolute;
+	left: 40%;
+	bottom: 35%;
+	width:200px;
+	height: 250px;
+	
+}
+
+#button {
+	position: absolute;
+	right: 0%;
+	top: 5%;
+	width: 100px;
+	height: 100px;
+}
+.button {
+	border-radius: 50%;
+	background-color: blue;
+	background-repeat: no-repeat;
+	opacity: 0;
+	left: 15px;
+	bottom: -10px;
+	position: absolute;
+	width: 0px;
+	height: 0px;
+	background-position: center;
+	transition:1s;
+	-moz-transition:1s;
+} 
+
+
+
+#at-plus-container:hover  > #bottom-positioner > #button > #control-ring-container > #control-ring > .button {
+	width: 40px;
+	height: 40px;
+	opacity: 1;
+}
+
+#at-plus-container:hover > #bottom-positioner > #button > #control-ring-container > #control-ring > .mask {
+	left: -60px;
+	bottom: -5px;
+}
+
+
+
+#at-plus-container:hover > #bottom-positioner > #button > #control-ring-container > #control-ring > .history {
+	left: -80px;
+	bottom: -50px;
+}
+
+#at-plus-container:hover > #bottom-positioner > #button > #control-ring-container > #control-ring > .message {
+	left: -60px;
+	bottom: -95px;
+}
+
+#at-plus-container:hover > #bottom-positioner > #button > #control-ring-container > #control-ring > .setting {
+	left: -15px;
+	bottom: -115px;
+}
+
+#at-plus-container:hover > #bottom-positioner > #button > #control-ring-container > #control-ring > .sign {
+	left: 35px;
+	bottom: -110px;
+}
+
+.mask {
+	
+}
+
+.history {
+	
+}
+
+.message {
+	
+}
+
+.setting {
+	
+}
+
+.sign {
+	
+}
+
+.info {
+
+}
+
+.unread {
+	border-radius: 50%;
+	background-color: red;
+	text-align: center;
+	font-style: bold;
+	color: white;
+	height: 20px;
+	width: 20px;
+	position: absolute;
+	right: -5px;
+	top: -3px;
+	bottom: 5px;
+	display: none;
+}
+.read {
+	border-radius: 50%;
+	background-color: red;
+	text-align: center;
+	font-style: bold;
+	color: white;
+	height: 20px;
+	width: 20px;
+	position: absolute;
+	right: -5px;
+	top: -3px;
+	bottom: 5px;
+	display: block;
+}
+
+.info {
+	overflow: hidden;
+	height: 0px;
+	width: 0px;
+	border-radius: 50%;
+	background-color: rgb(168, 167, 167);
+	position: absolute;
+	bottom: 0px;
+	left: 0px;
+	opacity: 0;
+	transition: 1s;
+	-moz-transition:1s;
+}
+
+#at-plus-container:hover > #bottom-positioner > #button > #info-bar > .info {
+	width: 126px;
+	height: 126px;
+	opacity: 1;
+	bottom: 20px;
+	left: -20px;
+}
+
+
+
+.icon {
+	background-image: url(assets/images/atplus_white.png);
+	background-color: gray;
+	background-position: center;
+	border-radius: 50%;
+	transition: 1s 0.5s;
+	-moz-transition: 1s 0.5s;
+	width: 30px;
+	height: 30px;
+	background-repeat: no-repeat;
+	position: absolute;
+	left: 0px;
+	bottom: -35px;
+	background-size: 22px 22px;
+
+}
+
+#at-plus-container:hover > #bottom-positioner > #button > .apb > .icon {
+	transform: scale(2, 2);
+	-moz-transform: scale(2, 2);
+	background-color: blue;
+	background-image: url(assets/images/atplus_green.png);
+	transition: 1s 0s;
+	-moz-transition: 1s 0s;
+
+}
+
+.alphapet {
+	position: absolute;
+
+	color:rgb(90, 196, 149);
+	font-style: bold;
+	font-size: 25px;
+	left:30%;
+	top:15%;
+}
+
+#at-plus-container:hover > #bottom-positioner > #button > #control-ring-container > #control-ring > ul > li > .unread {
+	display: block;
+}
+
+#sum {
+	position: absolute;
+	left:32%;
+	top:25%;
+	color:rgb(90, 196, 149);
+	font-style: bold;
+	font-size: 35px;
+}
+
