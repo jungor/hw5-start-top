@@ -1,0 +1,193 @@
+/* 初始化 */
+* {
+  margin: 0;
+  padding: 0;
+}
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+li {
+  list-style: none;
+}
+html {
+  /* 1rem = 16px */
+  font-size: 16px;
+}
+#at-plus-container {
+  /* @+区域 */
+  position: fixed;
+  left: 45%;
+  bottom: 20%;
+  width: 2rem;
+  height: 2rem;
+  cursor: pointer;
+  /* 为了判断@+区域 */
+}
+#at-plus-container #bottom-positioner {
+  /* 为了其他内容的定位 */
+  position: relative;
+}
+#at-plus-container #info-bar,
+#at-plus-container #control-ring li,
+#at-plus-container .apb {
+  /* 三块区域，hover时以'#bottom-positioner'为基准摆位置 */
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  transition: all 1s;
+}
+#at-plus-container .info {
+  width: 100%;
+  height: 100%;
+}
+#at-plus-container .apb {
+  /* 实现先收拢@+区域再回 */
+  background-color: rgba(0, 0, 0, 0.6);
+  transition-delay: 0.5s;
+}
+#at-plus-container .apb .icon {
+  /* @+按钮 */
+  width: 100%;
+  height: 100%;
+  background: url(../assets/images/atplus_white.png) no-repeat center;
+  background-size: 80%;
+}
+#at-plus-container #control-ring li {
+  /* 列表内容样式 */
+  font-weight: bold;
+  font-size: 1.5rem;
+  text-align: center;
+  color: #1e967b;
+  opacity: 0;
+  /* 隐藏 */
+}
+#at-plus-container #control-ring li span {
+  /* 右上角圆圈部分 */
+  position: absolute;
+  width: 1rem;
+  height: 1rem;
+  left: 1.2rem;
+  top: -0.2rem;
+  border-radius: 50%;
+  background-color: red;
+  font-size: 0.5rem;
+  color: white;
+  opacity: 0;
+  /* 隐藏 */
+}
+#at-plus-container:hover {
+  /* 移至中心 */
+  left: calc(45% - 7.5rem);
+  bottom: calc(20% - 7.5rem);
+  width: 15rem;
+  height: 15rem;
+}
+#at-plus-container:hover #bottom-positioner {
+  /* 作为基准  移到合适位置 */
+  left: 7.5rem;
+  top: 5.5rem;
+}
+#at-plus-container:hover #message {
+  /* 上升在#info-bar的上面 */
+  position: absolute;
+  left: -9rem;
+  top: -9.5rem;
+  min-width: 20rem;
+  text-align: center;
+  color: red;
+}
+#at-plus-container:hover #info-bar {
+  /* 上升！ */
+  left: -1.55rem;
+  top: -6.5rem;
+  width: 5rem;
+  height: 5rem;
+  background: rgba(48, 63, 159, 0.8);
+  transition: all 1s;
+}
+#at-plus-container:hover #info-bar:hover {
+  background-color: #303f9f;
+}
+#at-plus-container:hover #info-bar .info {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: bold;
+  padding-top: 1rem;
+  color: #4eee94;
+}
+#at-plus-container:hover #info-bar.disabled {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+#at-plus-container:hover #info-bar.disabled .info {
+  font-size: 1rem;
+}
+#at-plus-container:hover #control-ring li {
+  opacity: 1;
+  /* 列表 复现！ */
+  transition: all 1s;
+}
+#at-plus-container:hover #control-ring li:hover {
+  background-color: #303f9f;
+}
+#at-plus-container:hover #control-ring li.disabled {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+#at-plus-container:hover #control-ring li.wait span {
+  opacity: 1;
+  /* 红圆圈 复现！ */
+}
+#at-plus-container:hover #control-ring li.done span {
+  opacity: 1;
+  /* 红圆圈 复现！ */
+}
+#at-plus-container:hover #control-ring .mask {
+  /* 发散！ */
+  left: -3.2rem;
+  top: -2rem;
+  width: 2rem;
+  height: 2rem;
+  background: rgba(48, 63, 159, 0.8);
+}
+#at-plus-container:hover #control-ring .history {
+  left: -4rem;
+  top: 0.3rem;
+  width: 2rem;
+  height: 2rem;
+  background: rgba(48, 63, 159, 0.8);
+}
+#at-plus-container:hover #control-ring .message {
+  left: -3rem;
+  top: 2.5rem;
+  width: 2rem;
+  height: 2rem;
+  background: rgba(48, 63, 159, 0.8);
+}
+#at-plus-container:hover #control-ring .setting {
+  left: -1rem;
+  top: 3.8rem;
+  width: 2rem;
+  height: 2rem;
+  background: rgba(48, 63, 159, 0.8);
+}
+#at-plus-container:hover #control-ring .sign {
+  left: 1.5rem;
+  top: 3.5rem;
+  width: 2rem;
+  height: 2rem;
+  background: rgba(48, 63, 159, 0.8);
+}
+#at-plus-container:hover .apb {
+  /* 变大！ */
+  transform: scale(1.5, 1.5);
+  background-color: #303f9f;
+  transition: all 1s;
+}
+#at-plus-container:hover .apb .icon {
+  background-image: url(../assets/images/atplus_green.png);
+  background-size: 80%;
+}

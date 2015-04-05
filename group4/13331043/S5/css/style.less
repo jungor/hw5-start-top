@@ -1,0 +1,242 @@
+.width-and-height (@width: 2rem, @height: 2rem) {
+    width: @width;
+    height: @height;
+}
+
+/* 初始化 */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    .width-and-height(100%, 100%);
+}
+
+li {
+    list-style: none;
+}
+
+html {
+/* 1rem = 16px */
+    font-size: 16px;
+}
+
+#at-plus-container {
+/* @+区域 */
+    position: fixed;
+    left: 45%;
+    bottom: 20%;
+
+    .width-and-height;
+    cursor: pointer;
+    /* 为了判断@+区域 */
+
+    #bottom-positioner {
+    /* 为了其他内容的定位 */
+        position: relative;
+    }
+
+    #info-bar, #control-ring li, .apb {
+    /* 三块区域，hover时以'#bottom-positioner'为基准摆位置 */
+        position: absolute;
+
+        left: 0;
+        top: 0;
+
+        .width-and-height;
+        border-radius: 50%;
+        transition: all 1s;
+    }
+
+    .info {
+        .width-and-height(100%, 100%);
+    }
+
+    .apb {
+    /* 实现先收拢@+区域再回 */
+        background-color: rgba(0, 0, 0, 0.6);
+        transition-delay: 0.5s;
+
+        .icon {
+        /* @+按钮 */
+            .width-and-height(100%, 100%);
+            background: url(../assets/images/atplus_white.png) no-repeat center;
+            background-size: 80%;
+        }
+    }
+
+    #control-ring li {
+    /* 列表内容样式 */
+        font-weight: bold;
+        font-size: 1.5rem;
+        text-align: center;
+        color: #1e967b;
+
+        opacity: 0;
+        /* 隐藏 */
+
+        span {
+        /* 右上角圆圈部分 */
+            position: absolute;
+
+            .width-and-height(1rem, 1rem);
+
+            left: 1.2rem;
+            top: -0.2rem;
+
+            border-radius: 50%;
+            background-color: red;
+            font-size: 0.5rem;
+            color: white;
+
+            opacity: 0;
+            /* 隐藏 */
+        }
+    }
+
+    &:hover {
+    /* 移至中心 */
+        left: calc(~"45% - 7.5rem");
+        bottom: calc(~"20% - 7.5rem");
+
+        .width-and-height(15rem, 15rem);
+
+        #bottom-positioner {
+        /* 作为基准  移到合适位置 */
+            left: 7.5rem;
+            top: 5.5rem;
+        }
+
+        #message {
+            /* 上升在#info-bar的上面 */
+            position: absolute;
+            left: -9rem;
+            top: -9.5rem;
+
+            min-width: 20rem;
+            text-align: center;
+            color: red;
+        }
+
+        #info-bar {
+        /* 上升！ */
+            left: -1.55rem;
+            top: -6.5rem;
+
+            .width-and-height(5rem, 5rem);
+
+            background: rgba(48, 63, 159, 0.8);
+
+            transition: all 1s;
+
+            &:hover {
+                background-color: rgba(48, 63, 159, 1);
+            }
+
+            .info {
+                text-align: center;
+                font-size: 2rem;
+                font-weight: bold;
+                padding-top: 1rem;
+                color: rgb(78, 238, 148);
+            }
+        }
+
+        #info-bar.disabled {
+            background-color: rgba(0, 0, 0, 0.8);
+            .info {
+                font-size: 1rem;
+            }
+        }
+
+        #control-ring {
+            li {
+                opacity: 1;
+                /* 列表 复现！ */
+                transition: all 1s;
+
+                &:hover {
+                    background-color: rgba(48, 63, 159, 1);
+                }
+            }
+
+            li.disabled {
+                background-color: rgba(0, 0, 0, 0.8);
+            }
+
+            li.wait {
+                span {
+                    opacity: 1;
+                    /* 红圆圈 复现！ */
+                }
+            }
+
+            li.done {
+                span {
+                    opacity: 1;
+                    /* 红圆圈 复现！ */
+                }
+            }
+
+            .mask {
+            /* 发散！ */
+                left: -3.2rem;
+                top: -2rem;
+
+                .width-and-height;
+
+                background: rgba(48, 63, 159, 0.8);
+            }
+
+            .history {
+                left: -4rem;
+                top: 0.3rem;
+
+                .width-and-height;
+
+                background: rgba(48, 63, 159, 0.8);
+            }
+
+            .message {
+                left: -3rem;
+                top: 2.5rem;
+
+                .width-and-height;
+
+                background: rgba(48, 63, 159, 0.8);
+            }
+
+            .setting {
+                left: -1rem;
+                top: 3.8rem;
+
+                .width-and-height;
+
+                background: rgba(48, 63, 159, 0.8);
+            }
+
+            .sign {
+                left: 1.5rem;
+                top: 3.5rem;
+
+                .width-and-height;
+
+                background: rgba(48, 63, 159, 0.8);
+            }
+        }
+
+        .apb {
+        /* 变大！ */
+            transform: scale(1.5, 1.5);
+            background-color: rgba(48, 63, 159, 1);
+
+            transition: all 1s;
+
+            .icon {
+                background-image: url(../assets/images/atplus_green.png);
+                background-size: 80%;
+            }
+        }
+    }
+}
