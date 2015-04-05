@@ -1,0 +1,43 @@
+doctype html
+html
+  head
+    title 环形菜单
+    meta(charset='utf-8')
+    link(rel="icon" sizes="196x196" href="assets/images/favicon.png")
+    link(rel="stylesheet" href="assets/css/index.css")
+    script(src='index.js')
+    script(src='jquery.min.js')
+
+  body
+    div#at-plus-container
+      div#bottom-positioner
+
+        div#button
+
+          div#original-container
+            img#base(src='assets/images/atplus_white.png')
+
+          div#info-bar
+            ul
+              li#order
+                span A B C D E
+              li#sum
+                span 32
+
+          div#control-ring-container
+            ul#control-ring
+                li.A
+                  span.title#A A
+                  strong.num 1
+                li.B
+                  span.title#B B
+                  strong.num 1
+                li.C
+                  span.title#C C
+                  strong.num 1
+                li.D
+                  span.title#D D
+                  strong.num ...
+                li.E
+                  span.title#E E
+                  strong.num 1
