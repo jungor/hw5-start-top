@@ -1,0 +1,270 @@
+#button {
+	position: fixed;
+	top: 50%;
+	left: 50%;
+}
+
+#at-plus-container:hover #button {
+	width: 120px;
+	height: 150px;
+}
+
+.icon {
+	background-image: url(assets/images/atplus_white.png);
+	background-repeat: no-repeat;
+	background-color: grey;
+	background-size: 80%;
+	background-position: center;
+	border-radius: 50%;
+	width: 30px;
+	height: 30px;
+	position: absolute;
+	top: 65px;
+	left: 65px;
+	transition:all 1s;
+	-moz-transition:all 1s; /* Firefox 4 */
+	-webkit-transition:all 1s; /* Safari and Chrome */
+	-o-transition:all 1s; /* Opera */
+}
+
+#at-plus-container:hover .icon {
+	background-image: url(assets/images/atplus_green.png);
+	background-color: rgba(48, 63, 159, 1);
+	left: 55px;
+	top: 55px;
+	width: 50px;
+	height: 50px;
+}
+
+.info {
+	position: absolute;
+	top: 75px;
+	left: 75px;
+
+	border-radius: 50%;
+
+	background-color: grey;
+
+	width: 0px;
+	height: 0px;
+
+	opacity: 0;
+
+	transition:all 1s;
+	-moz-transition:all 1s; /* Firefox 4 */
+	-webkit-transition:all 1s; /* Safari and Chrome */
+	-o-transition:all 1s; /* Opera */
+}
+
+.info span {
+	position: absolute;
+	top: 40px;
+	left: 40px;
+
+	font-weight: 900;
+	font-size: 40px;
+	color: #5FD4AE;
+}
+
+#at-plus-container:hover .info {
+	width: 120px;
+	height: 120px;
+	top: -80px;
+	left: 25px;
+	opacity: 1;
+}
+
+ul {
+	list-style: none;
+}
+
+.posted {
+	position: absolute;
+	left:20px;
+	display: inline;
+}
+
+ .like {
+ 	position: absolute;
+	left:60px;
+	display: inline;
+}
+
+.mask {
+	position: absolute;
+	top: 75px;
+	left: 75px;
+
+	opacity: 0;
+
+	border-radius: 50%;
+
+	width: 0px;
+	height: 0px;
+
+	transition:all 1s;
+	-moz-transition:all 1s; /* Firefox 4 */
+	-webkit-transition:all 1s; /* Safari and Chrome */
+	-o-transition:all 1s; /* Opera */
+}
+
+#at-plus-container:hover .mask {
+	width: 30px;
+	height: 30px;
+	top: 30px;
+	left: 20px;
+	opacity: 1;
+}
+
+
+.history {
+	position: absolute;
+	top: 75px;
+	left: 75px;
+
+	opacity: 0;
+
+	border-radius: 50%;
+
+	width: 0px;
+	height: 0px;
+
+	transition:all 1s;
+	-moz-transition:all 1s; /* Firefox 4 */
+	-webkit-transition:all 1s; /* Safari and Chrome */
+	-o-transition:all 1s; /* Opera */
+}
+
+#at-plus-container:hover .history {
+	width: 30px;
+	height: 30px;
+	top: 65px;
+	left: 10px;
+	opacity: 1;
+}
+
+.message {
+	position: absolute;
+	top: 75px;
+	left: 75px;
+
+	opacity: 0;
+
+	border-radius: 50%;
+
+	width: 0px;
+	height: 0px;
+
+	transition:all 1s;
+	-moz-transition:all 1s; /* Firefox 4 */
+	-webkit-transition:all 1s; /* Safari and Chrome */
+	-o-transition:all 1s; /* Opera */
+}
+
+#at-plus-container:hover .message {
+	width: 30px;
+	height: 30px;
+	top: 100px;
+	left: 25px;
+	opacity: 1;
+}
+
+.setting {
+	position: absolute;
+	top: 75px;
+	left: 75px;
+
+	opacity: 0;
+
+	border-radius: 50%;
+
+	width: 0px;
+	height: 0px;
+
+	transition:all 1s;
+	-moz-transition:all 1s; /* Firefox 4 */
+	-webkit-transition:all 1s; /* Safari and Chrome */
+	-o-transition:all 1s; /* Opera */
+}
+
+#at-plus-container:hover .setting {
+	width: 30px;
+	height: 30px;
+	top: 125px;
+	left: 70px;
+	opacity: 1;
+}
+
+.sign {
+	position: absolute;
+	top: 75px;
+	left: 75px;
+
+	opacity: 0;
+
+	border-radius: 50%;
+
+	width: 0px;
+	height: 0px;
+
+	transition:all 1s;
+	-moz-transition:all 1s; /* Firefox 4 */
+	-webkit-transition:all 1s; /* Safari and Chrome */
+	-o-transition:all 1s; /* Opera */
+}
+
+#at-plus-container:hover .sign {
+	width: 30px;
+	height: 30px;
+	top: 105px;
+	left: 105px;
+	opacity: 1;
+
+}
+
+.unread {
+	background-color: red;
+	border-radius: 50%;
+	width: 0px;
+	height: 0px;
+	font-size: 0px;
+	font-weight: bold;
+	color: white;
+	text-align: center;
+	position: absolute;
+	left:20px;
+	top:-5px;
+	opacity: 0;
+}
+
+.getting {
+	opacity: 1;
+}
+
+#at-plus-container:hover .unread {
+	width: 18px;
+	height: 18px;
+	font-size: 15px;
+}
+
+.button {
+	text-align: center;
+	font-weight: bold;
+	color: white;
+}
+
+.enable {
+	background-color: rgba(48, 63, 159, 1);
+}
+
+.disable {
+	background-color: grey;
+}
+
+.waiting {
+	background-color: grey;
+}
+
+.done {
+	background-color: grey;
+}
