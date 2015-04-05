@@ -1,0 +1,160 @@
+#bottom-positioner {
+	margin-left: 120px;
+  	margin-top: 150px;
+	position: fixed;
+}
+
+.at-plus-container-block {
+  width: 220px;
+  height: 300px;
+  position:	absolute;
+}
+
+.ans {
+  padding-top: 30px;
+  	font-size: 30px;
+  	color: #58C998;
+  	text-align: center;
+}
+
+#button {
+	width: 30px;
+	height: 30px;
+	background-image: url("assets/images/atplus_white.png");
+	background-position: center;
+	background-repeat: no-repeat;
+	background-color: #AAAAAA;
+	border-radius: 100px;
+	position: absolute;
+	transition: all 1s;
+	margin-top: 80px;
+  	margin-left: 100px
+}
+
+#button_hover {
+	background-position: center;
+	background-repeat: no-repeat;
+	border-radius: 100px;
+	transition: all 1s;
+	background-image: url("assets/images/atplus_green.png");
+	background-color: #0044BB;
+	width: 80px;
+	height: 80px;
+	margin-top: 120px;
+  	margin-left: 100px
+}
+
+li {
+	list-style-type: none;
+}
+
+#button * {
+	position: absolute;
+}
+
+#button_hover * {
+	position: absolute;
+}
+
+.info {
+	background-color: #666666;
+	border-radius: 100px;
+	width: 0px;
+	height: 0px;
+	left: 0px;
+	top: 0px;
+	opacity: 0;
+	transition: all 1s;
+}
+
+.button {
+	width: 0px;
+	height: 0px;
+	left: 0px;
+	top: 0px;
+	background-color: #696969;
+	border-radius: 100px;
+	opacity: 0;
+	float: left;
+}
+
+#area:hover .info {
+	left: -35px;
+	top: -180px;
+	width: 150px;
+	height: 150px;
+	opacity: 1;
+
+}
+
+.button {
+	transition: all 1s;
+}
+
+#area:hover .button {
+	color: #58C998;
+	font-weight: bold;
+	font-size: 150%;
+	text-align: center;
+	background-color: #666666;
+	width: 40px;
+	height: 40px;
+	line-height: 40px;
+	opacity: 1;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+#area:hover .mask {
+	left: -50px;
+	top: -50px;
+}
+
+#area:hover .history {
+	left: -80px;
+	top: 0px;
+}
+
+#area:hover .message {
+	left: -55px;
+	top: 50px;
+}
+
+#area:hover .setting {
+	left: -10px;
+	top: 82px;
+}
+
+#area:hover .sign {
+	left: 55px;
+	top: 75px;
+}
+
+.random_num {
+	width: 0px;
+	height: 0px;
+	left: 0px;
+	top: 0px;
+	font-size: 0pt;
+	text-align: center;
+	line-height: 0px;
+	display: none;
+}
+
+#area:hover .random_num {
+	display: none;
+	width: 20px;
+	height: 20px;
+	border-radius: 20px;
+	left: 28px;
+	top: -3px;
+	background: #FE372F;
+	background-position: center;
+	text-align: center;
+	font-size: 10pt;
+	color: white;
+	line-height: 20px;
+	font-family: Arial, sans-serif;
+}
+
+.
