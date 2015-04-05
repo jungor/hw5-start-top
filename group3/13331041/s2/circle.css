@@ -1,0 +1,292 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+html,body {
+	font-family: Arial, sans-serif;
+}
+#at-plus-container {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	left: 0;
+	width: 0;
+
+	transition: all 0.8s;
+	-moz-transition: all 0.8s; /* Firefox 4 */
+	-webkit-transition: all 0.8s; /* Safari 和 Chrome */
+	-o-transition: all 0.8s; /* Opera */
+}
+#bottom-positioner {
+	position: fixed;
+	bottom: 300px;
+	width: 40px;
+	left: 660px;
+	height: 40px;
+
+	transition: all 0.8s;
+	-moz-transition: all 0.8s; /* Firefox 4 */
+	-webkit-transition: all 0.8s; /* Safari 和 Chrome */
+	-o-transition: all 0.8s; /* Opera */
+}
+#button {
+	position: absolute;
+	top: 0;
+	left: -160px;
+	width: 100%;
+	height: 100%;
+
+	transition: all 0.8s;
+	-moz-transition: all 0.8s; /* Firefox 4 */
+	-webkit-transition: all 0.8s; /* Safari 和 Chrome */
+	-o-transition: all 0.8s; /* Opera */
+}
+#info-bar{
+	position: absolute;
+	border-radius: 50%;
+	width:30px;
+	height: 30px;
+	overflow: hidden;
+	top: 0;
+	left: 0;
+	visibility: hidden;
+	transition: all 0.8s;
+	-moz-transition: all 0.8s; /* Firefox 4 */
+	-webkit-transition: all 0.8s; /* Safari 和 Chrome */
+	-o-transition: all 0.8s; /* Opera */
+}
+li {
+	list-style: none;
+	display: block;
+	color: white;
+	text-align: center;
+	font-size: 15px;
+}
+.info li {
+	position: absolute;
+	height: 30px;
+	transition: all 0.8s;
+	-moz-transition: all 0.8s; /* Firefox 4 */
+	-webkit-transition: all 0.8s; /* Safari 和 Chrome */
+	-o-transition: all 0.8s; /* Opera */
+}
+.page {
+	width: 100%;
+	height: 10px;
+}
+.mine span{
+	color: #079E6E;
+}
+.word {
+	left: 50%;
+	top: 10px;
+	position: absolute;
+	left: 10px;
+	top: 5px;
+}
+.user {
+	top: 20px;
+	left: 60px;
+}
+.comment{
+	top: 50px;
+	left: 60px;
+}
+.comment span {
+	font-size: 30pt;
+}
+.like{
+	top: 100px;
+	right: 30px;
+}
+.posted {
+	top: 100px;
+	left: 30px;
+}
+.apb {
+	position: absolute;
+	height: 40px;
+	width: 40px;
+	border-radius: 50%;	
+	left: 0;
+	top: 0;
+}
+.icon {
+	height: 100%;
+	width: 100%;
+	background-color: #939AC8;
+	background-image: url(assets/images/atplus_white.png);
+	background-position: center;
+	background-repeat: no-repeat;
+	border-radius: 50%;
+	background-size: 30px;
+	transition: all 0.8s;
+	-moz-transition: all 0.8s; /* Firefox 4 */
+	-webkit-transition: all 0.8s; /* Safari 和 Chrome */
+	-o-transition: all 0.8s; /* Opera */
+}
+.button {
+	position: absolute;
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	background-position: center;
+	background-repeat: no-repeat;
+	top: 0px;
+	left: 0px;
+	visibility: hidden;
+	background-size: 16px;
+	text-align: center;
+	transition: all 0.8s;
+	-moz-transition: all 0.8s; /* Firefox 4 */
+	-webkit-transition: all 0.8s; /* Safari 和 Chrome */
+	-o-transition: all 0.8s; /* Opera */
+
+}
+.unread {
+	position: absolute;
+	font-size: 15px;
+	color: white;
+	border-radius: 50%;
+	width: 18px;
+	height: 18px;
+	text-align: center;
+	padding-bottom: 2px;
+	right: -9px;
+	top: -5px;
+}
+#bottom-positioner:hover {
+	width: 800px;
+	left:0px;
+	height: 800px;
+	bottom: 0px;
+	transition: all 0.8s;
+	-moz-transition: all 0.8s; /* Firefox 4 */
+	-webkit-transition: all 0.8s; /* Safari 和 Chrome */
+	-o-transition: all 0.8s; /* Opera */
+}
+#bottom-positioner:hover #button{
+	top: 455px;
+	left: 500px;
+	transition: all 0.8s;
+	-moz-transition: all 0.8s; /* Firefox 4 */
+	-webkit-transition: all 0.8s; /* Safari 和 Chrome */
+	-o-transition: all 0.8s; /* Opera */
+}
+#bottom-positioner:hover .icon{
+	width: 50px;
+	height: 50px;
+	bottom: 250px;
+	left: 0px;
+	top: 0px;
+	background-size: 40px;
+	background-color:rgba(48, 63, 159, 1);
+	background-image: url(assets/images/atplus_green.png);
+	transition: all 0.8s;
+	-moz-transition: all 0.8s; /* Firefox 4 */
+	-webkit-transition: all 0.8s; /* Safari 和 Chrome */
+	-o-transition: all 0.8s; /* Opera */
+
+}
+#bottom-positioner:hover .apb {
+	width: 50px;
+	height: 50px;
+	left: 0px;
+	transition: all 0.8s;
+	-moz-transition: all 0.8s; /* Firefox 4 */
+	-webkit-transition: all 0.8s; /* Safari 和 Chrome */
+	-o-transition: all 0.8s; /* Opera */
+}
+#bottom-positioner:hover #info-bar {
+	width:150px;
+	height: 150px;
+	top:-162px;
+	left: -47px;
+	position: absolute;
+	visibility: visible;
+}
+#bottom-positioner:hover .info {
+	height: 100%;
+	width: 100%;
+	transition: all 0.8s;
+	-moz-transition: all 0.8s; /* Firefox 4 */
+	-webkit-transition: all 0.8s; /* Safari 和 Chrome */
+	-o-transition: all 0.8s; /* Opera */
+}
+#bottom-positioner:hover .button {
+	
+	width: 30px;
+	height: 30px;
+	visibility: visible;
+	transition: all 0.8s;
+	-moz-transition: all 0.8s; /* Firefox 4 */
+	-webkit-transition: all 0.8s; /* Safari 和 Chrome */
+	-o-transition: all 0.8s; /* Opera */
+}
+#bottom-positioner:hover .history {
+    top: 11px;
+    left: -59px;
+    transition: all 0.8s;
+	-moz-transition: all 0.8s; /* Firefox 4 */
+	-webkit-transition: all 0.8s; /* Safari 和 Chrome */
+	-o-transition: all 0.8s; /* Opera */
+}
+#bottom-positioner:hover .message {
+    top: 44px;
+    left: -46px;
+    transition: all 0.8s;
+	-moz-transition: all 0.8s; /* Firefox 4 */
+	-webkit-transition: all 0.8s; /* Safari 和 Chrome */
+	-o-transition: all 0.8s; /* Opera */
+}
+#bottom-positioner:hover .setting {
+    top: 71px;
+    left: -20px;
+    transition: all 0.8s;
+	-moz-transition: all 0.8s; /* Firefox 4 */
+	-webkit-transition: all 0.8s; /* Safari 和 Chrome */
+	-o-transition: all 0.8s; /* Opera */
+}
+#bottom-positioner:hover .sign {
+    top: 65px;
+    left: 27px;
+    transition: all 0.8s;
+	-moz-transition: all 0.8s; /* Firefox 4 */
+	-webkit-transition: all 0.8s; /* Safari 和 Chrome */
+	-o-transition: all 0.8s; /* Opera */
+}
+#bottom-positioner:hover .mask {
+    top: -24px;
+    left: -50px;
+    transition: all 0.8s;
+	-moz-transition: all 0.8s; /* Firefox 4 */
+	-webkit-transition: all 0.8s; /* Safari 和 Chrome */
+	-o-transition: all 0.8s; /* Opera */
+}
+p {
+	font-size: 50px;
+	color: #25E7A1;
+	position: absolute;
+	top: 50px;
+	left: 50px;
+}
+.disable {
+	background-color: #7E7E7E;
+}
+.enable {
+	background-color:rgba(48, 63, 159, 1);
+}
+
+.waiting-ballon {
+	content: "...";
+	background-color: #FF3F3C;
+	visibility: visible;
+}
+
+.hidden-ballon {
+	visibility: hidden;
+}
+.done-ballon {
+	background-color: #FF3F3C;
+	visibility: visible;
+}

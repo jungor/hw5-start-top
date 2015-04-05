@@ -1,0 +1,211 @@
+/*software process improvement
+week1 homework
+*/
+
+body {
+  font-family: Tahoma, Geneva, sans-serif;
+}
+
+.icon, .apb {
+  height: 40px;
+  width: 40px;
+}
+#button:hover .apb {
+  background-color: rgba(48, 63, 259, 1);
+  transform: scale(2,2);
+  -ms-transform: scale(2,2);  /* IE 9 */
+  -webkit-transform: scale(2,2);  /* Safari 和 Chrome */
+  -o-transform: scale(2,2); /* Opera */
+  -moz-transform: scale(2,2); /* Firefox */
+}
+#button:hover .icon {
+  height: 80px;
+  width: 80px;
+  margin-top: -20px;
+  margin-left: -20px;
+  background-image: url("assets/images/atplus_green.png");
+  transform: scale(.5,.5);
+  -ms-transform: scale(.5,.5);  /* IE 9 */
+  -webkit-transform: scale(.5,.5);  /* Safari 和 Chrome */
+  -o-transform: scale(.5,.5); /* Opera */
+  -moz-transform: scale(.5,.5); /* Firefox */
+}
+.apb {
+  position: absolute;
+  top: 400px;
+  left: 50%;
+
+  background-color: lightSlateBlue;
+  border-radius: 40px;
+
+  transition: all 0.5s linear 0s;
+  -moz-transition: all 0.5s linear 0s; /* Firefox 4 */
+  -webkit-transition: all 0.5s linear 0s; /* Safari and Chrome */
+  -o-transition: all 0.5s linear 0s; /* Opera */
+}
+
+.icon {
+  background-image: url("assets/images/atplus_white.png");
+  background-repeat: no-repeat;
+  background-position: center;
+
+  transition: all 0.5s linear 0s;
+  -moz-transition: all 0.5s linear 0s; /* Firefox 4 */
+  -webkit-transition: all 0.5s linear 0s; /* Safari and Chrome */
+  -o-transition: all 0.5s linear 0s; /* Opera */
+}
+
+li {
+  list-style-type: none;
+}
+
+.unread {
+  color: white;
+  background-color: red;
+
+  border-radius: 10px;
+  width: 20px;
+  height: 20px;
+
+  float: right;
+  position: absolute;
+
+  text-align: center;
+  font-size: 10px;
+}
+
+.info {
+  background-color: dimgray;
+
+  border-radius: 20px;
+  height: 40px;
+  width: 40px;
+
+  position: absolute;
+  top: 400px;
+  left: 50%;
+
+  overflow: hidden;
+
+  transition: all 0.5s linear 0s;
+  -moz-transition: all 0.5s linear 0s; /* Firefox 4 */
+  -webkit-transition: all 0.5s linear 0s; /* Safari and Chrome */
+  -o-transition: all 0.5s linear 0s; /* Opera */
+}
+.info ul {
+  padding: 0;
+}
+#button:hover #info-bar .info {
+  border-radius: 80px;
+
+  margin-top: -140px;
+
+  transform: scale(4,4);
+  -ms-transform: scale(4,4);  /* IE 9 */
+  -webkit-transform: scale(4,4);  /* Safari 和 Chrome */
+  -o-transform: scale(4,4); /* Opera */
+  -moz-transform: scale(4,4); /* Firefox */
+}
+#button:hover #info-bar .info ul {
+  font-size: 50px;
+  color: lightgreen;
+  border-radius: 80px;
+
+  margin-top: -120px;
+
+  transform: scale(.25,.25);
+  -ms-transform: scale(.25,.25);  /* IE 9 */
+  -webkit-transform: scale(.25,.25);  /* Safari 和 Chrome */
+  -o-transform: scale(.25,.25); /* Opera */
+  -moz-transform: scale(.25,.25); /* Firefox */
+}
+.user {
+  position: relative;
+  margin-top: 100px;
+}
+
+.button {
+  border-radius: 20px;
+  height: 40px;
+  width: 40px;
+
+  transition: all 0.5s linear 0s;
+  -moz-transition: all 0.5s linear 0s; /* Firefox 4 */
+  -webkit-transition: all 0.5s linear 0s; /* Safari and Chrome */
+  -o-transition: all 0.5s linear 0s; /* Opera */
+}
+
+#control-ring {
+  padding: 0;
+}
+.mask {
+  margin-top: -13px;
+}
+.history {
+  margin-top: -40px;
+}
+.message {
+  margin-top: -40px;
+}
+.setting {
+  margin-top: -40px;
+}
+.sign {
+  margin-top: -40px;
+}
+#button:hover .mask {
+  margin-left: -80px;
+  margin-top: -70px;
+}
+#button:hover .history {
+  margin-left: -100px;
+  margin-top: 20px;
+}
+#button:hover .message {
+  margin-left: -70px;
+  margin-top: 28px;
+}
+#button:hover .setting {
+  margin-left: -6px;
+  margin-top: -15px;
+}
+#button:hover .sign {
+  margin-left: 60px;
+  margin-top: -80px;
+}
+
+#button {
+  height: 50px;
+  width: 50px;
+  float: left;
+
+  margin-top: 390px;
+  margin-left: 50%;
+
+  position: static;
+}
+#button:hover {
+  height: 400px;
+  width: 400px;
+
+  margin-top: 150px;
+  margin-left: 30%;
+}
+#control-ring-container {
+  position: absolute;
+  top: 400px;
+  left: 50%;
+}
+
+#control-ring > li {
+  font-size: 30px;
+  color: #079E6E;
+  text-align: center;
+}
+
+.disabled {
+  background-color: dimgray;
+}
+.able {
+  background-color: rgba(48, 63, 159, 1);
+}
