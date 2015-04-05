@@ -1,0 +1,216 @@
+/*
+*    Filename: index.css
+*    Description: NULL.
+*    Last modified: 2015-03-28 01:43
+*
+*    Created by 陈炜健 on 2015-03-26
+*    Student ID: 13331018
+*    Email: eleveneat@gmail.com
+*    Copyright (C) 2014 All rights reserved.
+*/
+* {
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+}
+#at-plus-container {
+	width: 0px;
+	height: 0px;
+	position: fixed;
+	top: 125px;
+	bottom: 300px;
+	left: 50%;
+	font-weight: bold;
+}
+#bottom-positioner {
+	height: 0px;
+	width: 0px;
+}
+#at-plus-container:hover #bottom-positioner {
+	position :fixed;
+	left: 45%;
+	height: 195px;
+	width: 150px;
+}
+#button {
+	width: 27px;
+	height: 27px;
+	margin: auto;
+	position: relative;
+	bottom: -100px;
+}
+
+/* info-bar */
+#info-bar {
+	width: 0px;
+	height: 0px;
+}
+#info {
+	width: 23px;
+	height: 23px;
+	overflow: hidden;
+	position: relative;
+	opacity: 0;
+    transition: all 1s;
+    -moz-transition: all 1s;
+    -webkit-transition: all 1s;
+}
+#at-plus-container:hover #info {
+	width: 115px;
+	height: 115px;
+	border-radius: 60px;
+	overflow: hidden;
+	opacity: 1;
+    transform: translate(-35px, -120px);
+    -moz-transform: translate(-35px, -120px);
+    -webkit-transform: translate(-35px, -120px);
+}
+.disabled-info {
+	background-color: rgba(0, 0, 10, .4);
+}
+.enabled-info {
+	background-color: rgba(48, 63, 159, 1);
+}
+#sum {
+	position: relative;
+	top: 45px;
+	left: 40px;
+	font-size: 35px;
+	color: rgba(39, 217, 133, 1);
+}
+
+/* control ring container */
+#control-ring-container {
+	width: 0px;
+	height: 0px;
+	overflow: hidden;
+}
+#control-ring {
+	list-style-type: none;
+}
+#control-ring > li {
+	position: absolute;
+}
+
+.buttons {
+    transition: all 1s;
+    -moz-transition: all 1s;
+    -webkit-transition: all 1s;
+ 	width: 32px;
+	height: 32px;
+	border-radius: 20px;
+	background-color: rgba(48, 63, 159, 1);
+	opacity: 0;
+	text-align: center;
+	color: #2AD591;
+}
+.disabled-buttons {
+	transition: all 1s;
+    -moz-transition: all 1s;
+    -webkit-transition: all 1s;
+ 	width: 32px;
+	height: 32px;
+	border-radius: 20px;
+	background-color: rgba(0, 0, 10, .4);
+	opacity: 0;
+	text-align: center;
+	color: white;
+}
+#at-plus-container:hover #a-button {
+    -moz-transform: translate(-50px, -20px);
+    -webkit-transform: translate(-50px, -20px);
+    transform: translate(-50px, -20px);
+    opacity: 1;
+}
+#at-plus-container:hover #b-button {
+    -moz-transform: translate(-60px, 15px);
+    -webkit-transform: translate(-60px, 15px);
+    transform: translate(-60px, 15px);
+    opacity: 1;
+}
+#at-plus-container:hover #c-button {
+    -moz-transform: translate(-42px, 47px);
+    -webkit-transform: translate(-42px, 47px);
+    transform: translate(-42px, 47px);
+    opacity: 1;
+}
+#at-plus-container:hover #d-button {
+    -moz-transform: translate(-5px, 60px);
+    -webkit-transform: translate(-5px, 60px);
+    transform: translate(-5px, 60px);
+    opacity: 1;
+}
+#at-plus-container:hover #e-button {
+    -moz-transform: translate(33px, 58px);
+    -webkit-transform: translate(33px, 58px);
+    transform: translate(33px, 58px);
+    opacity: 1;
+}
+.unread {
+	position: relative;
+	top: 3px;
+}
+.name {
+	position: relative;
+	top: 4px;
+	font-weight: bold;
+	font-size: 24px;
+}
+.red-background {
+	position: absolute;
+	bottom: 20px;
+	left: 22px;
+	background-color: red;
+	color: white;
+	border-radius: 50%;
+	overflow: hidden;
+	width: 15px;
+	height: 15px;
+	font-size: 12px;
+}
+.text {
+	font-size: 12px;
+	position: relative;
+	top: 2px;
+}
+
+/* atplus */
+.apb {
+	width: 23px;
+	height: 23px;
+	background-color: rgb(152, 159, 213);
+	border-radius: 50%;
+	padding: 2px;
+	transition-property: background width height background-color;
+	-webkit-transition-property: background width height background-color;
+	transition-duration: 0.5s;
+	-webkit-transition-duration: 0.5s;
+	margin: auto;
+}
+#at-plus-container:hover .apb{
+	width: 42px;
+	height: 42px;
+	background-color: rgba(48, 63, 159, 1);
+	border-radius: 50%;
+}
+.icon {
+	width: 23px;
+	height: 23px;
+	border-radius: 50%;
+	padding: 2px;
+	transition-property: background width height background-size；
+	-webkit-transition-property: background width height background-size;
+	transition-duration: 0.5s;
+	-webkit-transition-duration: 0.5s;
+	background: url(assets/images/atplus_white.png) no-repeat;
+	background-size: 20px 20px;
+	background-position: 30%, 30%;
+}
+#at-plus-container:hover .icon{
+	width: 42px;
+	height: 42px;
+	border-radius: 50%;
+	background: url(assets/images/atplus_green.png) no-repeat;
+	background-size: 32px 28px;
+	background-position: 50%, 50%;
+}
