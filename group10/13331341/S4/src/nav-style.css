@@ -1,0 +1,203 @@
+body
+{ 
+  font-family: Tahoma, Geneva, sans-serif;
+}
+
+li {
+	list-style: none;
+}
+
+#at-plus-container {
+	width: 550px;
+	margin: auto;
+}
+
+#bottom-positioner {
+	width: 550px;
+	height: 350px;
+	margin: auto;
+	position: absolute;
+	bottom: 50px;
+}
+
+#button {
+	background: url("assets/images/atplus_white.png") no-repeat center center;
+	background-color: rgba(120,120,120, 0.8);
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    position: absolute;
+    top: 220px;
+    left: 270px;
+    z-index: 10;
+    -webkit-transition: all 0.4s ease;
+    transition: all 0.4s ease;
+}
+
+#info-bar {
+	position: absolute;
+	top: 16px;
+    left: 16px;
+    height: 0px;
+	width: 0px;
+	border-radius: 50%;
+	overflow: hidden;
+    -webkit-transition: all 0.4s ease;
+    transition: all 0.4s ease;
+}
+
+.info ul li span {
+	position: absolute;
+	top: -1px;
+	right: -17px;
+}
+
+#sum {
+	font-size: 0px;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	color: #079E6E;
+}
+
+.button {
+	height: 0px;
+	width: 0px;
+	background-color: rgba(48, 63, 159, 1);
+	background-size: 17px 17px;
+	border-radius: 50%;
+    position: absolute;
+    top: 16px;
+    left: 16px;
+    text-align: center;
+    -webkit-transition: all 0.4s ease;
+    transition: all 0.4s ease;
+}
+
+.letter {
+	font-size: 0px;
+	color: #079E6E;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+}
+
+.unread {
+	text-align: center;
+	height: 0px;
+	width: 0px;
+	background-color: #CC3300;
+	border-radius: 50%;
+	position: absolute;
+	top: -4px;
+	right: -6px;
+	color: #FFFFFF;
+	opacity: 0;
+}
+
+.bord {
+	height: 0px;
+	width: 0px;
+	position: absolute;
+	top: 16px;
+	right: 16px;
+}
+
+.apb {
+	height: 50px;
+	width: 50px;
+	position: absolute;
+	top: -10px;
+	right: -10px;
+}
+
+#button:hover .bord {
+	height: 150px;
+	width: 150px;
+	top: -30px;
+	left: -70px;
+}
+
+#button:hover #info-bar{
+	height: 140px;
+	width: 140px;
+}
+
+#button:hover #info-bar #sum {
+	font-size: 32px;
+	top: 40px;
+	left: 50px;
+}
+
+#button:hover .button {
+	height: 34px;
+	width: 34px;
+}
+
+#button:hover #control-ring-container ul .letter {
+	font-size: 20px;
+	top: 4px;
+	left: 11px;
+}
+
+#button:hover #control-ring-container ul .A{
+	top: -22px;
+	left: -60px;
+}
+
+#button:hover #control-ring-container ul .B{
+	top: 20px;
+	left: -70px;
+}
+
+#button:hover #control-ring-container ul .C{
+	top: 63px;
+	left: -53px;
+}
+
+#button:hover #control-ring-container ul .D{
+	top: 85px;
+	left: -12px;
+}
+
+#button:hover #control-ring-container ul .E{
+	top: 82px;
+	left: 35px;
+}
+
+#button:hover #control-ring-container .unread {
+	height: 20px;
+	width: 20px;
+}
+
+#button:hover #info-bar {
+	top: -150px;
+	left: -45px;
+}
+
+#button:hover {
+	background: url("assets/images/atplus_green.png") no-repeat center center;
+	background-size: 40px 30px;
+	background-color: rgba(48, 63, 159, 1);
+	width: 60px;
+	height: 60px;
+	border-radius: 50%;
+	top: 210px;
+    left: 260px;
+}
+
+.disabled {
+	background-color: rgba(104,104,104, 1);
+}
+
+.enabled {
+	background-color: rgba(48, 63, 159, 1);
+}
+
+.done {
+	background-color: rgba(104,104,104, 1);
+}
+
+.showunread {
+	opacity: 1;
+}
