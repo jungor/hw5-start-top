@@ -91,7 +91,7 @@ robot_action = ->
 		robot.state = 'disable'
 		buttons = $(".letter")
 		order = [0 to 4]
-		information = ['A' to 'E']
+		information = [\A to \E]
 		order.sort ->
 			0.5 - Math.random!
 		$('#big')[0].innerHTML = information[order[0]] + information[order[1]] + information[order[2]] + information[order[3]] + information[order[4]];
