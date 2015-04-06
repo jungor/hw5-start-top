@@ -1,0 +1,191 @@
+body {
+    font: serif;
+    font-weight: 900;
+}
+
+ul li {
+    list-style: none;
+}
+
+#bottom-positioner {
+	position: absolute;
+	bottom: 300px;
+	left:45%;
+	width: 40px;
+    height: 40px;
+    transition: all 0.5s;
+}
+
+#button {
+	position: fixed;
+	transition: all 0.5s;
+}
+
+.icon {
+	position: absolute;
+	top: 0;
+	left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: 30px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url(assets/images/atplus_white.png);
+    transition: all 0.5s;
+}
+
+.apb {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: rgba(151, 156, 211, 1);
+    transition: all 0.5s;
+}
+
+#info-bar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: rgba(126, 126, 126, 1);
+    opacity: 0;
+    overflow: hidden;
+    transition: all 0.5s;
+}
+
+.sum {
+    font-size: 20pt;
+    color: red;
+    left: 38%;
+    top: 40%;
+}
+
+#control-ring-container {
+    vertical-align: middle;
+    text-align: center;
+	position: absolute;
+	top: 0;
+	left: 0;
+	transition: all 0.5s;
+}
+
+.letter {
+    position: absolute;
+    top: 8px;
+    left: 12px;
+    font-size: 1.5em;
+    color: white;
+}
+
+.unread {
+    visibility: hidden;
+	opacity: 0;
+	position: absolute;
+    background-color: red;
+    color: #fff;
+    text-align: center;
+    width: 17px;
+    height: 17px;
+    border-radius: 50%;
+    right: -1px;
+    top: -4px;
+    font-size: 10px;
+}
+
+.info li {
+    position: absolute;
+    color: #fff;
+}
+
+.A, .B, .C, .D, .E{
+    
+    transition: all 0.5s;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.button {
+    opacity: 0;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: rgba(48,63,159,1);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#bottom-positioner:hover {
+	width: 300px;
+	height: 500px;
+	bottom: 80px;
+	left: calc(45% - 150px);
+	transition: all 0.5s;
+}
+
+#bottom-positioner:hover .apb {
+	top: 240px;
+    left: 150px;
+    width: 60px;
+    height: 60px;
+    background-color: rgba(48,63,159,1);
+	transition: all 0.5s;
+}
+
+#bottom-positioner:hover #info-bar {
+	background-color: rgba(126, 126, 126, 1);
+	opacity: 1;
+	width: 130px;
+	height: 130px;
+	top: 90px;
+	left:120px;
+}
+
+#at-plus-container:hover .icon {
+    background-size: 40px;
+    background-image: url(assets/images/atplus_green.png);
+    transition: all 0.5s;
+}
+
+#bottom-positioner:hover .unread {
+	opacity: 1;
+}
+
+#bottom-positioner:hover .A {
+    top: 209px;
+    left: 95px;
+    opacity: 1;
+    transition: all 0.5s;
+}
+
+#bottom-positioner:hover .B {
+    top: 253px;
+    left: 81px;
+    opacity: 1;
+    transition: all 0.5s;
+}
+#bottom-positioner:hover .C {
+    top: 296px;
+    left: 102px;
+    opacity: 1;
+    transition: all 0.5s;
+}
+
+#bottom-positioner:hover .D {
+    top: 323px;
+    left: 142px;
+    opacity: 1;
+    transition: all 0.5s;
+}
+
+#bottom-positioner:hover .E {
+    top: 322px;
+    left: 192px;
+    opacity: 1;
+    transition: all 0.5s;
+}
