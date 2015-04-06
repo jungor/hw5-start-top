@@ -7,7 +7,7 @@ var app = express();
 
 var port;
 
-app.use(function(req,res){
+app.use(function(req, res) {
   var pathname = url.parse(req.url).pathname;
   var mimeType = getMimeType(pathname);
   if (!!mimeType) {
@@ -15,13 +15,13 @@ app.use(function(req,res){
   } else {
     handleAjax(req, res);
   }
-}).listen(function(){
+}).listen(function() {
   console.log('server listen on ', port);
 });
 
 function getMimeType(pathname) {
   var validExtensions = {
-    ".html" : "text/html",
+    ".html": "text/html",
     ".js": "application/javascript",
     ".css": "text/css",
     ".jpg": "image/jpeg",
@@ -37,7 +37,7 @@ function handlePage(req, res, pathname) {
   var filePath = __dirname + pathname;
   var mimeType = getMimeType(pathname);
   if (fs.existsSync(filePath)) {
-    fs.readFile(filePath, function(err, data){
+    fs.readFile(filePath, function(err, data) {
       if (err) {
         res.writeHead(500);
         res.end();
@@ -56,11 +56,13 @@ function handlePage(req, res, pathname) {
 
 function handleAjax(req, res) {
   var random_time = 1000 + getRandomNumber(2000);
-  var random_num  = 1 + getRandomNumber(9);
-  setTimeout(function(){
-    res.writeHead(200, {'Content-Type': 'text/plain'});
+  var random_num = 1 + getRandomNumber(9);
+  setTimeout(function() {
+    res.writeHead(200, {
+      'Content-Type': 'text/plain'
+    });
     res.end("" + random_num);
-  // }, 300);
+    // }, 300);
   }, random_time);
 }
 
